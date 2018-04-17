@@ -1,0 +1,43 @@
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\bin\Debug\SW project.exe.config
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\bin\Debug\SW project.exe
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\bin\Debug\SW project.pdb
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW_project.Login.resources
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW_project.Manager.resources
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW_project.orderrec.resources
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW_project.Properties.Resources.resources
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW_project.Purchasesconcs.resources
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW project.csproj.GenerateResource.Cache
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW project.exe
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW project.pdb
+D:\CUFE_CHS\Junior-2\Software Engineering\Project\SW project\SW project\SW project\obj\Debug\SW project.csprojResolveAssemblyReference.cache
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\bin\Debug\SW project.exe.config
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW project.exe
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW project.pdb
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\bin\Debug\SW project.exe
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\bin\Debug\SW project.pdb
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW project.csprojResolveAssemblyReference.cache
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW_project.Login.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW_project.Manager.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW_project.orderrec.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW_project.Properties.Resources.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW_project.Purchasesconcs.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Project\Project\SW project\SW project\SW project\obj\Debug\SW project.csproj.GenerateResource.Cache
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Software Engineering Project\SW project\bin\Debug\SW project.exe.config
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Software Engineering Project\SW project\obj\Debug\SW project.exe
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Software Engineering Project\SW project\obj\Debug\SW project.pdb
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\bin\Debug\SW project.exe.config
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.exe
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.pdb
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\bin\Debug\SW project.exe
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\bin\Debug\SW project.pdb
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.csprojResolveAssemblyReference.cache
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Login.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Manager.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.orderrec.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Properties.Resources.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Purchasesconcs.resources
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.csproj.GenerateResource.Cache
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\bin\Debug\SW project.exe.manifest
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\bin\Debug\SW project.application
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.exe.manifest
+E:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.application
