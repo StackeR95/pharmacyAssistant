@@ -98,6 +98,13 @@ namespace SW_project
             String StoredProcedureName = StoredProcedures.get_all_customers;
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
+        public DataTable getCustomerByCode(int custCode)
+        {
+            String StoredProcedureName = StoredProcedures.getCustomersByCode;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@cust_code", custCode);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
         public int DeleteCustomer(int c)
         {
             String StoredProcedureName = StoredProcedures.DeleteCustomer;
@@ -109,8 +116,7 @@ namespace SW_project
         public DataTable stockavailable()
         {
             String StoredProcedureName = StoredProcedures.stockavailable;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+            return dbMan.ExecuteReader(StoredProcedureName, null);
         }
         public int lastorderno()
         {
