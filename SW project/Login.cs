@@ -34,7 +34,7 @@ namespace SW_project
 
             }
             else
-            { MessageBox.Show("Wrong Username or Password, renter correct information"); }
+            { MessageBox.Show("Wrong Username or Password, renter correct information","Invalid Input",MessageBoxButtons.OK,MessageBoxIcon.Error); }
 
         }
 

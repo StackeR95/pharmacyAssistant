@@ -28,6 +28,14 @@ namespace SW_project
             Parameters.Add("@password", password);
             return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
+        public Double getMedicinePrice(int medicineBarCode)
+        {
+            String StoredProcedureName = StoredProcedures.getMedicineByPrice;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@medicineBarCode", medicineBarCode);
+
+            return (Double)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
         public int ChangePassword(string username, string newpassword)
         {
             String StoredProcedureName = StoredProcedures.ChangePassword;

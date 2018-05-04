@@ -35,6 +35,7 @@ namespace SW_project
         public static string purchasesinperiod = "purchasesinperiod";
         public static string Allstock = "All_Stock";
         public static string getCustomersByCode = "getCustomersByCustomerCode";
+        public static string getMedicineByPrice = "getMedicinePrice";
     }
 
 }

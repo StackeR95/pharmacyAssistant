@@ -17,25 +17,37 @@ namespace SW_project
         {
             ControllerObj = new Controller();
             InitializeComponent();
-            DataTable dt = ControllerObj.get_all_medicine();
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "Code";
-            comboBox1.ValueMember = "Code";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addPurchaseButton_Click(object sender, EventArgs e)
         {
             int transno = ControllerObj.getlasttransnopur();
-            int result = ControllerObj.InsertPurchasesContent(transno, Int32.Parse(comboBox1.SelectedValue.ToString()), Int32.Parse(textBox1.Text));
-            if (result == 0)
+
+            if (quantityNumericInput.Value != 0)
             {
-                MessageBox.Show("Nothing have been added, recheck inputs");
+                int result = ControllerObj.InsertPurchasesContent(transno, Int32.Parse(comboBox1.SelectedValue.ToString()), Int32.Parse(quantityNumericInput.Value.ToString()));
+                if (result == 0)
+                {
+                    MessageBox.Show("Nothing have been added, recheck inputs", "Invalud Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Purchase product Successfully added","Success",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                }
+                quantityNumericInput.Value = 0;
             }
-            else
-            {
-                MessageBox.Show("Purchase product Successfully added");
-            }
-            textBox1.Clear();
+            else MessageBox.Show("Can't Add Purchase With Quantity Zero ","Invalud Input",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+     
         }
+
+        private void Purchasesconcs_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pharmacyDataSet.getallmedicine' table. You can move, or remove it, as needed.
+            this.getallmedicineTableAdapter.Fill(this.pharmacyDataSet.getallmedicine);
+
+        }
+
+
     }
 }

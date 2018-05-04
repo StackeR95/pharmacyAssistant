@@ -19,6 +19,7 @@ namespace SW_project
             controller = cont;
             username1 = username;
             InitializeComponent();
+            addMedicineCategoryTextField.Visible = false;
             stocklevel();
             activeIngredientTradeNameLabel.Hide();
             textBox12.Hide();
@@ -38,6 +39,15 @@ namespace SW_project
             this.getordersTableAdapter.Fill(this.pharmacyDataSet.getorders);
             deleteOrderTransNumberComboBox.DataSource = this.getordersBindingSource;
             deleteOrderTransNumberComboBox.Refresh();
+            //Refreshing deleteCustomerNameComboBox
+            this.getcustomersTableAdapter.Fill(this.pharmacyDataSet.getcustomers);
+            deleteCustomerNameComboBox.DataSource = this.getcustomersBindingSource;
+            deleteCustomerNameComboBox.Refresh();
+
+            //Refrshing editMedicineCategoryComboBox
+            this.getMedicinesByCategoryTableAdapter.Fill(this.pharmacyDataSet.getMedicinesByCategory);
+            editMedicineCategoryComboBox.DataSource = this.getMedicinesByCategoryBindingSource;
+            editMedicineCategoryComboBox.Refresh();
 
             //Refreshing EditCustomerNameComboBox
             editCustomerNameComboBox.SelectedIndexChanged += new System.EventHandler(editCustomerNameComboBox_SelectedIndexChanged); //edit customer
@@ -112,11 +122,21 @@ namespace SW_project
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void addNewMedicine_Click(object sender, EventArgs e)
         {
             int i;
-            if (int.TryParse(textBox17.Text, out i) && textBox13.Text.Trim() != string.Empty && textBox15.Text.Trim() != string.Empty && textBox16.Text.Trim() != string.Empty && textBox17.Text.Trim() != string.Empty && textBox18.Text.Trim() != string.Empty) {
-                int result = controller.InsertMedicine(Int32.Parse(textBox17.Text), textBox16.Text, textBox15.Text, textBox13.Text, comboBox3.Text, float.Parse(textBox18.Text));
+            String medicineCategory = "";
+            if(addMedicineNewCategoryCheckBox.Checked)
+            {
+                medicineCategory = addMedicineCategoryTextField.Text;
+            }
+            else
+            {
+                medicineCategory = addMedicineCategoryComboBox.SelectedValue.ToString();
+            }
+            if (int.TryParse(addMedicineBarcodeTextField.Text, out i) && medicineCategory != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineActiveIngrdTextField.Text.Trim() != string.Empty && addMedicineTradeNameTextField.Text.Trim() != string.Empty && addMedicineBarcodeTextField.Text.Trim() != string.Empty && addMedicinePriceOfSaleTextField.Text.Trim() != string.Empty)
+            {
+                int result = controller.InsertMedicine(Int32.Parse(addMedicineBarcodeTextField.Text), addMedicineTradeNameTextField.Text, addMedicineActiveIngrdTextField.Text, addMedicineConcectrationTextField.Text, medicineCategory, float.Parse(addMedicinePriceOfSaleTextField.Text));
                 if (result == 0)
                 {
                     MessageBox.Show("No Product Added, recheck inputs");
@@ -124,6 +144,12 @@ namespace SW_project
                 else
                 {
                     MessageBox.Show("Product Added Successfully");
+                    addMedicineActiveIngrdTextField.Clear();
+                    addMedicineBarcodeTextField.Clear();
+                    addMedicineCategoryTextField.Clear();
+                    addMedicinePriceOfSaleTextField.Clear();
+                    addMedicineTradeNameTextField.Clear();
+                    addMedicineConcectrationTextField.Clear();
                 }
                 refreshComboBoxes();
             }
@@ -134,10 +160,10 @@ namespace SW_project
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void addCustomerButton_Click(object sender, EventArgs e)
         {
-            if (textBox5.Text.Trim() != string.Empty && textBox6.Text.Trim() != string.Empty && textBox7.Text.Trim() != string.Empty) {
-                int result = controller.InsertCustomer(textBox5.Text, textBox6.Text, richTextBox1.Text, textBox7.Text);
+            if (addCustomerNameTextField.Text.Trim() != string.Empty && addCustomerAddressTextField.Text.Trim() != string.Empty && addCustomerTelephoneTextField.Text.Trim() != string.Empty) {
+                int result = controller.InsertCustomer(addCustomerNameTextField.Text, addCustomerAddressTextField.Text, addCustomerCommentsTextField.Text, addCustomerTelephoneTextField.Text);
                 if (result == 0)
                 {
                     MessageBox.Show("No Customer Added, recheck inputs");
@@ -145,6 +171,10 @@ namespace SW_project
                 else
                 {
                     MessageBox.Show("Customer Added Successfully");
+                    addCustomerNameTextField.Clear();
+                    addCustomerAddressTextField.Clear();
+                    addCustomerCommentsTextField.Clear();
+                    addCustomerTelephoneTextField.Clear();
                 }
                 refreshComboBoxes();
             }
@@ -219,8 +249,9 @@ namespace SW_project
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void addNewOrderButton_Click_1(object sender, EventArgs e)
         {
+            totalPriceValueTextLabel.Visible = true;
             if (orderQuantityTextField.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("One of the fields is empty. Please enter inputs.");
@@ -228,10 +259,13 @@ namespace SW_project
             else
             {
                 DataTable dt = controller.stockavailable();
+                Double medicinePrice = controller.getMedicinePrice(Int32.Parse(orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString()));
+                Double totalPrice = medicinePrice * Int32.Parse(orderQuantityTextField.Text.ToString());
                 int stockcount = (from DataRow dr in dt.Rows
                                   where (int)dr["Code"] == Int32.Parse(orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString())
                                   select (int)dr["Stock"]).FirstOrDefault();
-                string[] row = { orderChooseMedicineComboBox.Text, orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString(), orderQuantityTextField.Text.ToString() };
+           
+                string[] row = { orderChooseMedicineComboBox.Text, orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString(), orderQuantityTextField.Text.ToString() ,medicinePrice.ToString(),totalPrice.ToString() };
 
                 if (Int32.Parse(orderQuantityTextField.Text.ToString()) < 1)
                 {
@@ -251,20 +285,22 @@ namespace SW_project
                     else
                     {
                         orderDescriptionGridView.Rows.Add(row);
-
+                        Double currentTotalPrice = Double.Parse(totalPriceValueTextLabel.Text.ToString());
+                        currentTotalPrice += totalPrice;
+                        totalPriceValueTextLabel.Text = currentTotalPrice.ToString();
                     }
                 }
             }
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void orderNewOrderButton_Click(object sender, EventArgs e)
         {
 
             if (orderDescriptionGridView.Rows.Count > 0)
             {
 
-                int result1 = controller.insertorders();
+                int newOrderNumber = controller.insertorders();
                 int transno = controller.lastorderno();
                 for (int i = 0; i < orderDescriptionGridView.Rows.Count; i++)
                 {
@@ -303,7 +339,7 @@ namespace SW_project
         private void button10_Click(object sender, EventArgs e)
         {
             
-                int result = controller.InsertPurchases(dateTimePicker7.Text);
+                int result = controller.InsertPurchases(addPurchaseDateTimePicker.Text);
                 if (result == 0)
                 {
                     MessageBox.Show("Nothing have been added, recheck inputs");
@@ -471,6 +507,20 @@ namespace SW_project
             // TODO: This line of code loads data into the 'pharmacyDataSet.getMedicinesBarCode' table. You can move, or remove it, as needed.
             this.getMedicinesBarCodeTableAdapter.Fill(this.pharmacyDataSet.getMedicinesBarCode);
 
+        }
+
+        private void addMedicineNewCategoryCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(addMedicineNewCategoryCheckBox.Checked)
+            {
+                addMedicineCategoryComboBox.Visible = false;
+                addMedicineCategoryTextField.Visible = true;
+            }
+            else
+            {
+                addMedicineCategoryComboBox.Visible = true;
+                addMedicineCategoryTextField.Visible = false;
+            }
         }
 
 
