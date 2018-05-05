@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -38,8 +39,8 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.ManagerTabs = new System.Windows.Forms.TabControl();
             this.orderPageTab = new System.Windows.Forms.TabPage();
-            this.totalPriceValueTextLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.orderTotalPriceValueTextLabel = new System.Windows.Forms.Label();
+            this.orderTotalPriceLabel = new System.Windows.Forms.Label();
             this.orderDescriptionGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,103 +59,103 @@
             this.addPageTab = new System.Windows.Forms.TabPage();
             this.addDataTabControl = new System.Windows.Forms.TabControl();
             this.addMedicineTabPage = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.addMedicineGroupBox = new System.Windows.Forms.GroupBox();
             this.addMedicineCategoryComboBox = new System.Windows.Forms.ComboBox();
             this.getMedicinesByCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addMedicineNewCategoryCheckBox = new System.Windows.Forms.CheckBox();
             this.addMedicineCategoryTextField = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
+            this.addMedicineBarCodeLabel = new System.Windows.Forms.Label();
             this.addMedicineAddButton = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.addMedicineCategoryLabel = new System.Windows.Forms.Label();
+            this.addMedicinePriceOfSaleLabel = new System.Windows.Forms.Label();
             this.addMedicineConcectrationTextField = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.addMedicineConcentrationLabel = new System.Windows.Forms.Label();
             this.addMedicinePriceOfSaleTextField = new System.Windows.Forms.TextBox();
             this.addMedicineBarcodeTextField = new System.Windows.Forms.TextBox();
             this.addMedicineActiveIngrdTextField = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.addMedicineTradeNameLabel = new System.Windows.Forms.Label();
+            this.addMedicineActiveIngredientLabel = new System.Windows.Forms.Label();
             this.addMedicineTradeNameTextField = new System.Windows.Forms.TextBox();
             this.addCustomerTabPage = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.addCustomerGroupBox = new System.Windows.Forms.GroupBox();
             this.addCustomerCommentsTextField = new System.Windows.Forms.RichTextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.addCustomerCommentsLabel = new System.Windows.Forms.Label();
             this.addCustomerTelephoneTextField = new System.Windows.Forms.TextBox();
             this.addCustomerAddressTextField = new System.Windows.Forms.TextBox();
             this.addCustomerNameTextField = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.addCustomerTelephoneNumbLabel = new System.Windows.Forms.Label();
+            this.addCustomerAddressLabel = new System.Windows.Forms.Label();
+            this.addCustomerNameLabel = new System.Windows.Forms.Label();
             this.addCustomerAddButton = new System.Windows.Forms.Button();
             this.addPurchaseTabPage = new System.Windows.Forms.TabPage();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.addPurchaseGroupBox = new System.Windows.Forms.GroupBox();
             this.addPurchaseAddButton = new System.Windows.Forms.Button();
             this.addPurchaseDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label28 = new System.Windows.Forms.Label();
+            this.addPurchaseDateLabel = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.editPageTab = new System.Windows.Forms.TabPage();
             this.editDataTablControl = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.editMedicineGroupBox = new System.Windows.Forms.GroupBox();
             this.editMedicineBarcodeComboBox = new System.Windows.Forms.ComboBox();
             this.getMedicinesBarCodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editMedicineCategoryComboBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.editMedicineBarCodeLabel = new System.Windows.Forms.Label();
             this.editMedicineButton = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.editMedicineCategoryLabel = new System.Windows.Forms.Label();
+            this.editMedicinePriceOfSaleLabel = new System.Windows.Forms.Label();
             this.editMedicineConcentrationTextField = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.editMedicineConcentrationLabel = new System.Windows.Forms.Label();
             this.editMedicinePriceOfSaleTextField = new System.Windows.Forms.TextBox();
             this.editMedicineActiveIngredientTextField = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.editMedicineTradenameLabel = new System.Windows.Forms.Label();
+            this.editMedicineActiveIngredientLabel = new System.Windows.Forms.Label();
             this.editMedicineTradeNameTextField = new System.Windows.Forms.TextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.editCustomerGroupBox = new System.Windows.Forms.GroupBox();
             this.editCustomerNameComboBox = new System.Windows.Forms.ComboBox();
             this.getcustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editCustomerCommentsTextField = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.editCustomerCommentsLabel = new System.Windows.Forms.Label();
             this.editCustomerTelephoneTextField = new System.Windows.Forms.TextBox();
             this.editCustomerAddressTextField = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.editCustomerTelephoneNumbLabel = new System.Windows.Forms.Label();
+            this.editCustomerAddressLabel = new System.Windows.Forms.Label();
+            this.editCustomerNameLabel = new System.Windows.Forms.Label();
             this.editCustomerButton = new System.Windows.Forms.Button();
             this.deletePageTab = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.deleteCustomerGroupBox = new System.Windows.Forms.GroupBox();
             this.deleteCustomerButton = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
+            this.deleteCustomerNameLabel = new System.Windows.Forms.Label();
             this.deleteCustomerNameComboBox = new System.Windows.Forms.ComboBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.deleteOrderGroupBox = new System.Windows.Forms.GroupBox();
             this.deleteOrderButton = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
+            this.deleteOrderTransNumbLabel = new System.Windows.Forms.Label();
             this.deleteOrderTransNumberComboBox = new System.Windows.Forms.ComboBox();
             this.getordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchPageTab = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label141 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.searchDataGridView = new System.Windows.Forms.DataGridView();
+            this.searchGroupBox = new System.Windows.Forms.GroupBox();
             this.categoryLabel = new System.Windows.Forms.Label();
+            this.searchCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.searchFromLabel = new System.Windows.Forms.Label();
+            this.searchToLabel = new System.Windows.Forms.Label();
+            this.searchToDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.searchViewButton = new System.Windows.Forms.Button();
-            this.label94 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.searchChooseLabel = new System.Windows.Forms.Label();
+            this.searchFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.searchMethodsComboBox = new System.Windows.Forms.ComboBox();
-            this.activeIngredientTradeNameLabel = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.searchActiveIngredientTradeNameLabel = new System.Windows.Forms.Label();
+            this.searchMultipleOptionTextField = new System.Windows.Forms.TextBox();
             this.accountPageTab = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.accountGroupBox = new System.Windows.Forms.GroupBox();
+            this.accountChangePasswordButton = new System.Windows.Forms.Button();
+            this.accountRenterNewPassLabel = new System.Windows.Forms.Label();
+            this.accountNewPassLabel = new System.Windows.Forms.Label();
+            this.accountOldPassLabel = new System.Windows.Forms.Label();
+            this.accountNewPasswordTextField = new System.Windows.Forms.TextBox();
+            this.accountOldPasswordTextField = new System.Windows.Forms.TextBox();
+            this.accountRenterNewPasswordTextField = new System.Windows.Forms.TextBox();
             this.comboBox25 = new System.Windows.Forms.ComboBox();
             this.label90 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
@@ -174,29 +175,29 @@
             this.addPageTab.SuspendLayout();
             this.addDataTabControl.SuspendLayout();
             this.addMedicineTabPage.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.addMedicineGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getMedicinesByCategoryBindingSource)).BeginInit();
             this.addCustomerTabPage.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.addCustomerGroupBox.SuspendLayout();
             this.addPurchaseTabPage.SuspendLayout();
-            this.groupBox10.SuspendLayout();
+            this.addPurchaseGroupBox.SuspendLayout();
             this.editPageTab.SuspendLayout();
             this.editDataTablControl.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.editMedicineGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getMedicinesBarCodeBindingSource)).BeginInit();
             this.tabPage9.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.editCustomerGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getcustomersBindingSource)).BeginInit();
             this.deletePageTab.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.deleteCustomerGroupBox.SuspendLayout();
+            this.deleteOrderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getordersBindingSource)).BeginInit();
             this.searchPageTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchDataGridView)).BeginInit();
+            this.searchGroupBox.SuspendLayout();
             this.accountPageTab.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.accountGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -283,8 +284,8 @@
             // 
             this.orderPageTab.AutoScroll = true;
             this.orderPageTab.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.orderPageTab.Controls.Add(this.totalPriceValueTextLabel);
-            this.orderPageTab.Controls.Add(this.label1);
+            this.orderPageTab.Controls.Add(this.orderTotalPriceValueTextLabel);
+            this.orderPageTab.Controls.Add(this.orderTotalPriceLabel);
             this.orderPageTab.Controls.Add(this.orderDescriptionGridView);
             this.orderPageTab.Controls.Add(this.orderDataGroupBox);
             this.orderPageTab.Location = new System.Drawing.Point(4, 29);
@@ -294,33 +295,30 @@
             this.orderPageTab.TabIndex = 1;
             this.orderPageTab.Text = "Order";
             // 
-            // totalPriceValueTextLabel
+            // orderTotalPriceValueTextLabel
             // 
-            this.totalPriceValueTextLabel.AutoSize = true;
-            this.totalPriceValueTextLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.totalPriceValueTextLabel.Location = new System.Drawing.Point(865, 414);
-            this.totalPriceValueTextLabel.Name = "totalPriceValueTextLabel";
-            this.totalPriceValueTextLabel.Size = new System.Drawing.Size(17, 17);
-            this.totalPriceValueTextLabel.TabIndex = 3;
-            this.totalPriceValueTextLabel.Text = "0";
-            this.totalPriceValueTextLabel.Visible = false;
+            this.orderTotalPriceValueTextLabel.AutoSize = true;
+            this.orderTotalPriceValueTextLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.orderTotalPriceValueTextLabel.Location = new System.Drawing.Point(865, 414);
+            this.orderTotalPriceValueTextLabel.Name = "orderTotalPriceValueTextLabel";
+            this.orderTotalPriceValueTextLabel.Size = new System.Drawing.Size(17, 17);
+            this.orderTotalPriceValueTextLabel.TabIndex = 3;
+            this.orderTotalPriceValueTextLabel.Text = "0";
+            this.orderTotalPriceValueTextLabel.Visible = false;
             // 
-            // label1
+            // orderTotalPriceLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(761, 414);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Total Price :";
+            this.orderTotalPriceLabel.AutoSize = true;
+            this.orderTotalPriceLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.orderTotalPriceLabel.Location = new System.Drawing.Point(761, 414);
+            this.orderTotalPriceLabel.Name = "orderTotalPriceLabel";
+            this.orderTotalPriceLabel.Size = new System.Drawing.Size(97, 17);
+            this.orderTotalPriceLabel.TabIndex = 2;
+            this.orderTotalPriceLabel.Text = "Total Price :";
             // 
             // orderDescriptionGridView
             // 
             this.orderDescriptionGridView.AllowUserToAddRows = false;
-            this.orderDescriptionGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.orderDescriptionGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.orderDescriptionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orderDescriptionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -334,8 +332,10 @@
             this.orderDescriptionGridView.Name = "orderDescriptionGridView";
             this.orderDescriptionGridView.ReadOnly = true;
             this.orderDescriptionGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.orderDescriptionGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.orderDescriptionGridView.RowTemplate.ReadOnly = true;
-            this.orderDescriptionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.orderDescriptionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.orderDescriptionGridView.Size = new System.Drawing.Size(606, 429);
             this.orderDescriptionGridView.TabIndex = 1;
             // 
@@ -487,7 +487,7 @@
             // 
             // addMedicineTabPage
             // 
-            this.addMedicineTabPage.Controls.Add(this.groupBox5);
+            this.addMedicineTabPage.Controls.Add(this.addMedicineGroupBox);
             this.addMedicineTabPage.Location = new System.Drawing.Point(4, 29);
             this.addMedicineTabPage.Name = "addMedicineTabPage";
             this.addMedicineTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -496,33 +496,33 @@
             this.addMedicineTabPage.Text = "Medicine";
             this.addMedicineTabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // addMedicineGroupBox
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addMedicineGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Controls.Add(this.addMedicineCategoryComboBox);
-            this.groupBox5.Controls.Add(this.addMedicineNewCategoryCheckBox);
-            this.groupBox5.Controls.Add(this.addMedicineCategoryTextField);
-            this.groupBox5.Controls.Add(this.label26);
-            this.groupBox5.Controls.Add(this.addMedicineAddButton);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label27);
-            this.groupBox5.Controls.Add(this.addMedicineConcectrationTextField);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.addMedicinePriceOfSaleTextField);
-            this.groupBox5.Controls.Add(this.addMedicineBarcodeTextField);
-            this.groupBox5.Controls.Add(this.addMedicineActiveIngrdTextField);
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.addMedicineTradeNameTextField);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(845, 391);
-            this.groupBox5.TabIndex = 36;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Add new medicine";
+            this.addMedicineGroupBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineCategoryComboBox);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineNewCategoryCheckBox);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineCategoryTextField);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineBarCodeLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineAddButton);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineCategoryLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicinePriceOfSaleLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineConcectrationTextField);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineConcentrationLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicinePriceOfSaleTextField);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineBarcodeTextField);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineActiveIngrdTextField);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineTradeNameLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineActiveIngredientLabel);
+            this.addMedicineGroupBox.Controls.Add(this.addMedicineTradeNameTextField);
+            this.addMedicineGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.addMedicineGroupBox.Name = "addMedicineGroupBox";
+            this.addMedicineGroupBox.Size = new System.Drawing.Size(845, 391);
+            this.addMedicineGroupBox.TabIndex = 36;
+            this.addMedicineGroupBox.TabStop = false;
+            this.addMedicineGroupBox.Text = "Add new medicine";
             // 
             // addMedicineCategoryComboBox
             // 
@@ -561,14 +561,14 @@
             this.addMedicineCategoryTextField.Size = new System.Drawing.Size(235, 23);
             this.addMedicineCategoryTextField.TabIndex = 35;
             // 
-            // label26
+            // addMedicineBarCodeLabel
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 27);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(73, 17);
-            this.label26.TabIndex = 34;
-            this.label26.Text = "Barcode:";
+            this.addMedicineBarCodeLabel.AutoSize = true;
+            this.addMedicineBarCodeLabel.Location = new System.Drawing.Point(6, 27);
+            this.addMedicineBarCodeLabel.Name = "addMedicineBarCodeLabel";
+            this.addMedicineBarCodeLabel.Size = new System.Drawing.Size(73, 17);
+            this.addMedicineBarCodeLabel.TabIndex = 34;
+            this.addMedicineBarCodeLabel.Text = "Barcode:";
             // 
             // addMedicineAddButton
             // 
@@ -581,23 +581,23 @@
             this.addMedicineAddButton.UseVisualStyleBackColor = true;
             this.addMedicineAddButton.Click += new System.EventHandler(this.addNewMedicine_Click);
             // 
-            // label21
+            // addMedicineCategoryLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 111);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 17);
-            this.label21.TabIndex = 28;
-            this.label21.Text = "Category:";
+            this.addMedicineCategoryLabel.AutoSize = true;
+            this.addMedicineCategoryLabel.Location = new System.Drawing.Point(6, 111);
+            this.addMedicineCategoryLabel.Name = "addMedicineCategoryLabel";
+            this.addMedicineCategoryLabel.Size = new System.Drawing.Size(78, 17);
+            this.addMedicineCategoryLabel.TabIndex = 28;
+            this.addMedicineCategoryLabel.Text = "Category:";
             // 
-            // label27
+            // addMedicinePriceOfSaleLabel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 167);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(106, 17);
-            this.label27.TabIndex = 32;
-            this.label27.Text = "Price of Sale:";
+            this.addMedicinePriceOfSaleLabel.AutoSize = true;
+            this.addMedicinePriceOfSaleLabel.Location = new System.Drawing.Point(6, 167);
+            this.addMedicinePriceOfSaleLabel.Name = "addMedicinePriceOfSaleLabel";
+            this.addMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(106, 17);
+            this.addMedicinePriceOfSaleLabel.TabIndex = 32;
+            this.addMedicinePriceOfSaleLabel.Text = "Price of Sale:";
             // 
             // addMedicineConcectrationTextField
             // 
@@ -606,14 +606,14 @@
             this.addMedicineConcectrationTextField.Size = new System.Drawing.Size(235, 23);
             this.addMedicineConcectrationTextField.TabIndex = 4;
             // 
-            // label22
+            // addMedicineConcentrationLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 139);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 17);
-            this.label22.TabIndex = 29;
-            this.label22.Text = "Concentration:";
+            this.addMedicineConcentrationLabel.AutoSize = true;
+            this.addMedicineConcentrationLabel.Location = new System.Drawing.Point(6, 139);
+            this.addMedicineConcentrationLabel.Name = "addMedicineConcentrationLabel";
+            this.addMedicineConcentrationLabel.Size = new System.Drawing.Size(114, 17);
+            this.addMedicineConcentrationLabel.TabIndex = 29;
+            this.addMedicineConcentrationLabel.Text = "Concentration:";
             // 
             // addMedicinePriceOfSaleTextField
             // 
@@ -636,23 +636,23 @@
             this.addMedicineActiveIngrdTextField.Size = new System.Drawing.Size(235, 23);
             this.addMedicineActiveIngrdTextField.TabIndex = 2;
             // 
-            // label25
+            // addMedicineTradeNameLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 55);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(95, 17);
-            this.label25.TabIndex = 33;
-            this.label25.Text = "Tradename:";
+            this.addMedicineTradeNameLabel.AutoSize = true;
+            this.addMedicineTradeNameLabel.Location = new System.Drawing.Point(6, 55);
+            this.addMedicineTradeNameLabel.Name = "addMedicineTradeNameLabel";
+            this.addMedicineTradeNameLabel.Size = new System.Drawing.Size(95, 17);
+            this.addMedicineTradeNameLabel.TabIndex = 33;
+            this.addMedicineTradeNameLabel.Text = "Tradename:";
             // 
-            // label24
+            // addMedicineActiveIngredientLabel
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 83);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(135, 17);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "Active ingredient:";
+            this.addMedicineActiveIngredientLabel.AutoSize = true;
+            this.addMedicineActiveIngredientLabel.Location = new System.Drawing.Point(6, 83);
+            this.addMedicineActiveIngredientLabel.Name = "addMedicineActiveIngredientLabel";
+            this.addMedicineActiveIngredientLabel.Size = new System.Drawing.Size(135, 17);
+            this.addMedicineActiveIngredientLabel.TabIndex = 31;
+            this.addMedicineActiveIngredientLabel.Text = "Active ingredient:";
             // 
             // addMedicineTradeNameTextField
             // 
@@ -663,7 +663,7 @@
             // 
             // addCustomerTabPage
             // 
-            this.addCustomerTabPage.Controls.Add(this.groupBox3);
+            this.addCustomerTabPage.Controls.Add(this.addCustomerGroupBox);
             this.addCustomerTabPage.Location = new System.Drawing.Point(4, 29);
             this.addCustomerTabPage.Name = "addCustomerTabPage";
             this.addCustomerTabPage.Size = new System.Drawing.Size(857, 403);
@@ -671,26 +671,26 @@
             this.addCustomerTabPage.Text = "Customer";
             this.addCustomerTabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // addCustomerGroupBox
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addCustomerGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.addCustomerCommentsTextField);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.addCustomerTelephoneTextField);
-            this.groupBox3.Controls.Add(this.addCustomerAddressTextField);
-            this.groupBox3.Controls.Add(this.addCustomerNameTextField);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.addCustomerAddButton);
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(851, 397);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Add new customer";
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerCommentsTextField);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerCommentsLabel);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerTelephoneTextField);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerAddressTextField);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerNameTextField);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerTelephoneNumbLabel);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerAddressLabel);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerNameLabel);
+            this.addCustomerGroupBox.Controls.Add(this.addCustomerAddButton);
+            this.addCustomerGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.addCustomerGroupBox.Name = "addCustomerGroupBox";
+            this.addCustomerGroupBox.Size = new System.Drawing.Size(851, 397);
+            this.addCustomerGroupBox.TabIndex = 0;
+            this.addCustomerGroupBox.TabStop = false;
+            this.addCustomerGroupBox.Text = "Add new customer";
             // 
             // addCustomerCommentsTextField
             // 
@@ -703,14 +703,14 @@
             this.addCustomerCommentsTextField.TabIndex = 4;
             this.addCustomerCommentsTextField.Text = "";
             // 
-            // label9
+            // addCustomerCommentsLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 17);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Comments:";
+            this.addCustomerCommentsLabel.AutoSize = true;
+            this.addCustomerCommentsLabel.Location = new System.Drawing.Point(6, 113);
+            this.addCustomerCommentsLabel.Name = "addCustomerCommentsLabel";
+            this.addCustomerCommentsLabel.Size = new System.Drawing.Size(87, 17);
+            this.addCustomerCommentsLabel.TabIndex = 12;
+            this.addCustomerCommentsLabel.Text = "Comments:";
             // 
             // addCustomerTelephoneTextField
             // 
@@ -734,39 +734,39 @@
             this.addCustomerNameTextField.Size = new System.Drawing.Size(171, 23);
             this.addCustomerNameTextField.TabIndex = 1;
             // 
-            // label8
+            // addCustomerTelephoneNumbLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Telephone no.:";
+            this.addCustomerTelephoneNumbLabel.AutoSize = true;
+            this.addCustomerTelephoneNumbLabel.Location = new System.Drawing.Point(6, 85);
+            this.addCustomerTelephoneNumbLabel.Name = "addCustomerTelephoneNumbLabel";
+            this.addCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(118, 17);
+            this.addCustomerTelephoneNumbLabel.TabIndex = 10;
+            this.addCustomerTelephoneNumbLabel.Text = "Telephone no.:";
             // 
-            // label7
+            // addCustomerAddressLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Address:";
+            this.addCustomerAddressLabel.AutoSize = true;
+            this.addCustomerAddressLabel.Location = new System.Drawing.Point(6, 59);
+            this.addCustomerAddressLabel.Name = "addCustomerAddressLabel";
+            this.addCustomerAddressLabel.Size = new System.Drawing.Size(72, 17);
+            this.addCustomerAddressLabel.TabIndex = 8;
+            this.addCustomerAddressLabel.Text = "Address:";
             // 
-            // label6
+            // addCustomerNameLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 17);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Name:";
+            this.addCustomerNameLabel.AutoSize = true;
+            this.addCustomerNameLabel.Location = new System.Drawing.Point(6, 33);
+            this.addCustomerNameLabel.Name = "addCustomerNameLabel";
+            this.addCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.addCustomerNameLabel.TabIndex = 6;
+            this.addCustomerNameLabel.Text = "Name:";
             // 
             // addCustomerAddButton
             // 
             this.addCustomerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addCustomerAddButton.Location = new System.Drawing.Point(700, 368);
             this.addCustomerAddButton.Name = "addCustomerAddButton";
-            this.addCustomerAddButton.Size = new System.Drawing.Size(145, 23);
+            this.addCustomerAddButton.Size = new System.Drawing.Size(145, 29);
             this.addCustomerAddButton.TabIndex = 5;
             this.addCustomerAddButton.Text = "Add Customer";
             this.addCustomerAddButton.UseVisualStyleBackColor = true;
@@ -775,7 +775,7 @@
             // addPurchaseTabPage
             // 
             this.addPurchaseTabPage.BackColor = System.Drawing.Color.Transparent;
-            this.addPurchaseTabPage.Controls.Add(this.groupBox10);
+            this.addPurchaseTabPage.Controls.Add(this.addPurchaseGroupBox);
             this.addPurchaseTabPage.Controls.Add(this.button11);
             this.addPurchaseTabPage.Location = new System.Drawing.Point(4, 29);
             this.addPurchaseTabPage.Name = "addPurchaseTabPage";
@@ -784,17 +784,17 @@
             this.addPurchaseTabPage.TabIndex = 6;
             this.addPurchaseTabPage.Text = "Purchase";
             // 
-            // groupBox10
+            // addPurchaseGroupBox
             // 
-            this.groupBox10.Controls.Add(this.addPurchaseAddButton);
-            this.groupBox10.Controls.Add(this.addPurchaseDateTimePicker);
-            this.groupBox10.Controls.Add(this.label28);
-            this.groupBox10.Location = new System.Drawing.Point(6, 6);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(841, 391);
-            this.groupBox10.TabIndex = 16;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Purchase info";
+            this.addPurchaseGroupBox.Controls.Add(this.addPurchaseAddButton);
+            this.addPurchaseGroupBox.Controls.Add(this.addPurchaseDateTimePicker);
+            this.addPurchaseGroupBox.Controls.Add(this.addPurchaseDateLabel);
+            this.addPurchaseGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.addPurchaseGroupBox.Name = "addPurchaseGroupBox";
+            this.addPurchaseGroupBox.Size = new System.Drawing.Size(841, 391);
+            this.addPurchaseGroupBox.TabIndex = 16;
+            this.addPurchaseGroupBox.TabStop = false;
+            this.addPurchaseGroupBox.Text = "Purchase info";
             // 
             // addPurchaseAddButton
             // 
@@ -805,7 +805,7 @@
             this.addPurchaseAddButton.TabIndex = 2;
             this.addPurchaseAddButton.Text = "Add Purchase";
             this.addPurchaseAddButton.UseVisualStyleBackColor = true;
-            this.addPurchaseAddButton.Click += new System.EventHandler(this.button10_Click);
+            this.addPurchaseAddButton.Click += new System.EventHandler(this.addPurchaseAddButton_Click);
             // 
             // addPurchaseDateTimePicker
             // 
@@ -816,14 +816,14 @@
             this.addPurchaseDateTimePicker.Size = new System.Drawing.Size(200, 23);
             this.addPurchaseDateTimePicker.TabIndex = 1;
             // 
-            // label28
+            // addPurchaseDateLabel
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 26);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 17);
-            this.label28.TabIndex = 15;
-            this.label28.Text = "Date:";
+            this.addPurchaseDateLabel.AutoSize = true;
+            this.addPurchaseDateLabel.Location = new System.Drawing.Point(6, 26);
+            this.addPurchaseDateLabel.Name = "addPurchaseDateLabel";
+            this.addPurchaseDateLabel.Size = new System.Drawing.Size(47, 17);
+            this.addPurchaseDateLabel.TabIndex = 15;
+            this.addPurchaseDateLabel.Text = "Date:";
             // 
             // button11
             // 
@@ -866,7 +866,7 @@
             // tabPage7
             // 
             this.tabPage7.AutoScroll = true;
-            this.tabPage7.Controls.Add(this.groupBox6);
+            this.tabPage7.Controls.Add(this.editMedicineGroupBox);
             this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -875,30 +875,30 @@
             this.tabPage7.Text = "Medicine";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // editMedicineGroupBox
             // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.editMedicineGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.editMedicineBarcodeComboBox);
-            this.groupBox6.Controls.Add(this.editMedicineCategoryComboBox);
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.editMedicineButton);
-            this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.editMedicineConcentrationTextField);
-            this.groupBox6.Controls.Add(this.label17);
-            this.groupBox6.Controls.Add(this.editMedicinePriceOfSaleTextField);
-            this.groupBox6.Controls.Add(this.editMedicineActiveIngredientTextField);
-            this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.editMedicineTradeNameTextField);
-            this.groupBox6.Location = new System.Drawing.Point(6, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(851, 397);
-            this.groupBox6.TabIndex = 37;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Edit medicine";
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineBarcodeComboBox);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineCategoryComboBox);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineBarCodeLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineButton);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineCategoryLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicinePriceOfSaleLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineConcentrationTextField);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineConcentrationLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicinePriceOfSaleTextField);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineActiveIngredientTextField);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineTradenameLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineActiveIngredientLabel);
+            this.editMedicineGroupBox.Controls.Add(this.editMedicineTradeNameTextField);
+            this.editMedicineGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.editMedicineGroupBox.Name = "editMedicineGroupBox";
+            this.editMedicineGroupBox.Size = new System.Drawing.Size(851, 397);
+            this.editMedicineGroupBox.TabIndex = 37;
+            this.editMedicineGroupBox.TabStop = false;
+            this.editMedicineGroupBox.Text = "Edit medicine";
             // 
             // editMedicineBarcodeComboBox
             // 
@@ -933,43 +933,43 @@
             this.editMedicineCategoryComboBox.TabIndex = 4;
             this.editMedicineCategoryComboBox.ValueMember = "Category";
             // 
-            // label14
+            // editMedicineBarCodeLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 27);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 17);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Barcode:";
+            this.editMedicineBarCodeLabel.AutoSize = true;
+            this.editMedicineBarCodeLabel.Location = new System.Drawing.Point(6, 27);
+            this.editMedicineBarCodeLabel.Name = "editMedicineBarCodeLabel";
+            this.editMedicineBarCodeLabel.Size = new System.Drawing.Size(73, 17);
+            this.editMedicineBarCodeLabel.TabIndex = 34;
+            this.editMedicineBarCodeLabel.Text = "Barcode:";
             // 
             // editMedicineButton
             // 
             this.editMedicineButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editMedicineButton.Location = new System.Drawing.Point(700, 368);
+            this.editMedicineButton.Location = new System.Drawing.Point(696, 363);
             this.editMedicineButton.Name = "editMedicineButton";
-            this.editMedicineButton.Size = new System.Drawing.Size(145, 23);
+            this.editMedicineButton.Size = new System.Drawing.Size(149, 28);
             this.editMedicineButton.TabIndex = 7;
             this.editMedicineButton.Text = "Edit Medicine";
             this.editMedicineButton.UseVisualStyleBackColor = true;
-            this.editMedicineButton.Click += new System.EventHandler(this.button7_Click);
+            this.editMedicineButton.Click += new System.EventHandler(this.editMedicineButton_Click);
             // 
-            // label15
+            // editMedicineCategoryLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 111);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 17);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "Category:";
+            this.editMedicineCategoryLabel.AutoSize = true;
+            this.editMedicineCategoryLabel.Location = new System.Drawing.Point(6, 111);
+            this.editMedicineCategoryLabel.Name = "editMedicineCategoryLabel";
+            this.editMedicineCategoryLabel.Size = new System.Drawing.Size(78, 17);
+            this.editMedicineCategoryLabel.TabIndex = 28;
+            this.editMedicineCategoryLabel.Text = "Category:";
             // 
-            // label16
+            // editMedicinePriceOfSaleLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 167);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 17);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "Price of Sale:";
+            this.editMedicinePriceOfSaleLabel.AutoSize = true;
+            this.editMedicinePriceOfSaleLabel.Location = new System.Drawing.Point(6, 167);
+            this.editMedicinePriceOfSaleLabel.Name = "editMedicinePriceOfSaleLabel";
+            this.editMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(106, 17);
+            this.editMedicinePriceOfSaleLabel.TabIndex = 32;
+            this.editMedicinePriceOfSaleLabel.Text = "Price of Sale:";
             // 
             // editMedicineConcentrationTextField
             // 
@@ -978,14 +978,14 @@
             this.editMedicineConcentrationTextField.Size = new System.Drawing.Size(235, 23);
             this.editMedicineConcentrationTextField.TabIndex = 5;
             // 
-            // label17
+            // editMedicineConcentrationLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 139);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 17);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "Concentration:";
+            this.editMedicineConcentrationLabel.AutoSize = true;
+            this.editMedicineConcentrationLabel.Location = new System.Drawing.Point(6, 139);
+            this.editMedicineConcentrationLabel.Name = "editMedicineConcentrationLabel";
+            this.editMedicineConcentrationLabel.Size = new System.Drawing.Size(114, 17);
+            this.editMedicineConcentrationLabel.TabIndex = 29;
+            this.editMedicineConcentrationLabel.Text = "Concentration:";
             // 
             // editMedicinePriceOfSaleTextField
             // 
@@ -1001,23 +1001,23 @@
             this.editMedicineActiveIngredientTextField.Size = new System.Drawing.Size(235, 23);
             this.editMedicineActiveIngredientTextField.TabIndex = 3;
             // 
-            // label18
+            // editMedicineTradenameLabel
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 55);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 17);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Tradename:";
+            this.editMedicineTradenameLabel.AutoSize = true;
+            this.editMedicineTradenameLabel.Location = new System.Drawing.Point(6, 55);
+            this.editMedicineTradenameLabel.Name = "editMedicineTradenameLabel";
+            this.editMedicineTradenameLabel.Size = new System.Drawing.Size(95, 17);
+            this.editMedicineTradenameLabel.TabIndex = 33;
+            this.editMedicineTradenameLabel.Text = "Tradename:";
             // 
-            // label19
+            // editMedicineActiveIngredientLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 83);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(135, 17);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "Active ingredient:";
+            this.editMedicineActiveIngredientLabel.AutoSize = true;
+            this.editMedicineActiveIngredientLabel.Location = new System.Drawing.Point(6, 83);
+            this.editMedicineActiveIngredientLabel.Name = "editMedicineActiveIngredientLabel";
+            this.editMedicineActiveIngredientLabel.Size = new System.Drawing.Size(135, 17);
+            this.editMedicineActiveIngredientLabel.TabIndex = 31;
+            this.editMedicineActiveIngredientLabel.Text = "Active ingredient:";
             // 
             // editMedicineTradeNameTextField
             // 
@@ -1028,7 +1028,7 @@
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.groupBox4);
+            this.tabPage9.Controls.Add(this.editCustomerGroupBox);
             this.tabPage9.Location = new System.Drawing.Point(4, 29);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Size = new System.Drawing.Size(857, 403);
@@ -1036,26 +1036,26 @@
             this.tabPage9.Text = "Customer";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // editCustomerGroupBox
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.editCustomerGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.editCustomerNameComboBox);
-            this.groupBox4.Controls.Add(this.editCustomerCommentsTextField);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.editCustomerTelephoneTextField);
-            this.groupBox4.Controls.Add(this.editCustomerAddressTextField);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.editCustomerButton);
-            this.groupBox4.Location = new System.Drawing.Point(3, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(851, 397);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Edit customer";
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerNameComboBox);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerCommentsTextField);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerCommentsLabel);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerTelephoneTextField);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerAddressTextField);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerTelephoneNumbLabel);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerAddressLabel);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerNameLabel);
+            this.editCustomerGroupBox.Controls.Add(this.editCustomerButton);
+            this.editCustomerGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.editCustomerGroupBox.Name = "editCustomerGroupBox";
+            this.editCustomerGroupBox.Size = new System.Drawing.Size(851, 397);
+            this.editCustomerGroupBox.TabIndex = 1;
+            this.editCustomerGroupBox.TabStop = false;
+            this.editCustomerGroupBox.Text = "Edit customer";
             // 
             // editCustomerNameComboBox
             // 
@@ -1087,14 +1087,14 @@
             this.editCustomerCommentsTextField.TabIndex = 4;
             this.editCustomerCommentsTextField.Text = "";
             // 
-            // label10
+            // editCustomerCommentsLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 113);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 17);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Comments:";
+            this.editCustomerCommentsLabel.AutoSize = true;
+            this.editCustomerCommentsLabel.Location = new System.Drawing.Point(6, 113);
+            this.editCustomerCommentsLabel.Name = "editCustomerCommentsLabel";
+            this.editCustomerCommentsLabel.Size = new System.Drawing.Size(87, 17);
+            this.editCustomerCommentsLabel.TabIndex = 12;
+            this.editCustomerCommentsLabel.Text = "Comments:";
             // 
             // editCustomerTelephoneTextField
             // 
@@ -1111,88 +1111,88 @@
             this.editCustomerAddressTextField.Size = new System.Drawing.Size(171, 23);
             this.editCustomerAddressTextField.TabIndex = 2;
             // 
-            // label11
+            // editCustomerTelephoneNumbLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 85);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 17);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Telephone no.:";
+            this.editCustomerTelephoneNumbLabel.AutoSize = true;
+            this.editCustomerTelephoneNumbLabel.Location = new System.Drawing.Point(6, 85);
+            this.editCustomerTelephoneNumbLabel.Name = "editCustomerTelephoneNumbLabel";
+            this.editCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(118, 17);
+            this.editCustomerTelephoneNumbLabel.TabIndex = 10;
+            this.editCustomerTelephoneNumbLabel.Text = "Telephone no.:";
             // 
-            // label12
+            // editCustomerAddressLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 55);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 17);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Address:";
+            this.editCustomerAddressLabel.AutoSize = true;
+            this.editCustomerAddressLabel.Location = new System.Drawing.Point(6, 55);
+            this.editCustomerAddressLabel.Name = "editCustomerAddressLabel";
+            this.editCustomerAddressLabel.Size = new System.Drawing.Size(72, 17);
+            this.editCustomerAddressLabel.TabIndex = 8;
+            this.editCustomerAddressLabel.Text = "Address:";
             // 
-            // label13
+            // editCustomerNameLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 25);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Name:";
+            this.editCustomerNameLabel.AutoSize = true;
+            this.editCustomerNameLabel.Location = new System.Drawing.Point(6, 25);
+            this.editCustomerNameLabel.Name = "editCustomerNameLabel";
+            this.editCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.editCustomerNameLabel.TabIndex = 6;
+            this.editCustomerNameLabel.Text = "Name:";
             // 
             // editCustomerButton
             // 
             this.editCustomerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.editCustomerButton.Location = new System.Drawing.Point(700, 368);
             this.editCustomerButton.Name = "editCustomerButton";
-            this.editCustomerButton.Size = new System.Drawing.Size(145, 23);
+            this.editCustomerButton.Size = new System.Drawing.Size(145, 29);
             this.editCustomerButton.TabIndex = 5;
             this.editCustomerButton.Text = "Edit Customer";
             this.editCustomerButton.UseVisualStyleBackColor = true;
-            this.editCustomerButton.Click += new System.EventHandler(this.button5_Click);
+            this.editCustomerButton.Click += new System.EventHandler(this.editCustomerButton_Click);
             // 
             // deletePageTab
             // 
             this.deletePageTab.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.deletePageTab.Controls.Add(this.groupBox7);
-            this.deletePageTab.Controls.Add(this.groupBox8);
+            this.deletePageTab.Controls.Add(this.deleteCustomerGroupBox);
+            this.deletePageTab.Controls.Add(this.deleteOrderGroupBox);
             this.deletePageTab.Location = new System.Drawing.Point(4, 29);
             this.deletePageTab.Name = "deletePageTab";
             this.deletePageTab.Size = new System.Drawing.Size(982, 444);
             this.deletePageTab.TabIndex = 6;
             this.deletePageTab.Text = "Delete";
             // 
-            // groupBox7
+            // deleteCustomerGroupBox
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.deleteCustomerGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.deleteCustomerButton);
-            this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Controls.Add(this.deleteCustomerNameComboBox);
-            this.groupBox7.Location = new System.Drawing.Point(7, 81);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(861, 62);
-            this.groupBox7.TabIndex = 13;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Customer";
+            this.deleteCustomerGroupBox.Controls.Add(this.deleteCustomerButton);
+            this.deleteCustomerGroupBox.Controls.Add(this.deleteCustomerNameLabel);
+            this.deleteCustomerGroupBox.Controls.Add(this.deleteCustomerNameComboBox);
+            this.deleteCustomerGroupBox.Location = new System.Drawing.Point(7, 81);
+            this.deleteCustomerGroupBox.Name = "deleteCustomerGroupBox";
+            this.deleteCustomerGroupBox.Size = new System.Drawing.Size(861, 62);
+            this.deleteCustomerGroupBox.TabIndex = 13;
+            this.deleteCustomerGroupBox.TabStop = false;
+            this.deleteCustomerGroupBox.Text = "Customer";
             // 
             // deleteCustomerButton
             // 
             this.deleteCustomerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteCustomerButton.Location = new System.Drawing.Point(675, 27);
             this.deleteCustomerButton.Name = "deleteCustomerButton";
-            this.deleteCustomerButton.Size = new System.Drawing.Size(178, 23);
+            this.deleteCustomerButton.Size = new System.Drawing.Size(178, 29);
             this.deleteCustomerButton.TabIndex = 2;
             this.deleteCustomerButton.Text = "Delete Customer";
             this.deleteCustomerButton.UseVisualStyleBackColor = true;
-            this.deleteCustomerButton.Click += new System.EventHandler(this.button9_Click);
+            this.deleteCustomerButton.Click += new System.EventHandler(this.deleteCustomerButton_Click);
             // 
-            // label23
+            // deleteCustomerNameLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 17);
-            this.label23.TabIndex = 19;
-            this.label23.Text = "Name:";
+            this.deleteCustomerNameLabel.AutoSize = true;
+            this.deleteCustomerNameLabel.Location = new System.Drawing.Point(12, 27);
+            this.deleteCustomerNameLabel.Name = "deleteCustomerNameLabel";
+            this.deleteCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.deleteCustomerNameLabel.TabIndex = 19;
+            this.deleteCustomerNameLabel.Text = "Name:";
             // 
             // deleteCustomerNameComboBox
             // 
@@ -1209,39 +1209,39 @@
             this.deleteCustomerNameComboBox.ValueMember = "cust_code";
             this.deleteCustomerNameComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
-            // groupBox8
+            // deleteOrderGroupBox
             // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.deleteOrderGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox8.Controls.Add(this.deleteOrderButton);
-            this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Controls.Add(this.deleteOrderTransNumberComboBox);
-            this.groupBox8.Location = new System.Drawing.Point(7, 13);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(861, 62);
-            this.groupBox8.TabIndex = 12;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Order";
+            this.deleteOrderGroupBox.Controls.Add(this.deleteOrderButton);
+            this.deleteOrderGroupBox.Controls.Add(this.deleteOrderTransNumbLabel);
+            this.deleteOrderGroupBox.Controls.Add(this.deleteOrderTransNumberComboBox);
+            this.deleteOrderGroupBox.Location = new System.Drawing.Point(7, 13);
+            this.deleteOrderGroupBox.Name = "deleteOrderGroupBox";
+            this.deleteOrderGroupBox.Size = new System.Drawing.Size(861, 62);
+            this.deleteOrderGroupBox.TabIndex = 12;
+            this.deleteOrderGroupBox.TabStop = false;
+            this.deleteOrderGroupBox.Text = "Order";
             // 
             // deleteOrderButton
             // 
             this.deleteOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteOrderButton.Location = new System.Drawing.Point(675, 27);
             this.deleteOrderButton.Name = "deleteOrderButton";
-            this.deleteOrderButton.Size = new System.Drawing.Size(178, 23);
+            this.deleteOrderButton.Size = new System.Drawing.Size(178, 29);
             this.deleteOrderButton.TabIndex = 2;
             this.deleteOrderButton.Text = "Delete Order";
             this.deleteOrderButton.UseVisualStyleBackColor = true;
             this.deleteOrderButton.Click += new System.EventHandler(this.deleteOrderButton_Click);
             // 
-            // label20
+            // deleteOrderTransNumbLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 27);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(83, 17);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "Trans. no.";
+            this.deleteOrderTransNumbLabel.AutoSize = true;
+            this.deleteOrderTransNumbLabel.Location = new System.Drawing.Point(12, 27);
+            this.deleteOrderTransNumbLabel.Name = "deleteOrderTransNumbLabel";
+            this.deleteOrderTransNumbLabel.Size = new System.Drawing.Size(83, 17);
+            this.deleteOrderTransNumbLabel.TabIndex = 19;
+            this.deleteOrderTransNumbLabel.Text = "Trans. no.";
             // 
             // deleteOrderTransNumberComboBox
             // 
@@ -1265,8 +1265,8 @@
             // searchPageTab
             // 
             this.searchPageTab.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.searchPageTab.Controls.Add(this.dataGridView1);
-            this.searchPageTab.Controls.Add(this.groupBox9);
+            this.searchPageTab.Controls.Add(this.searchDataGridView);
+            this.searchPageTab.Controls.Add(this.searchGroupBox);
             this.searchPageTab.Location = new System.Drawing.Point(4, 29);
             this.searchPageTab.Name = "searchPageTab";
             this.searchPageTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1274,106 +1274,104 @@
             this.searchPageTab.TabIndex = 4;
             this.searchPageTab.Text = "Search";
             // 
-            // dataGridView1
+            // searchDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchDataGridView.AllowUserToAddRows = false;
+            this.searchDataGridView.AllowUserToDeleteRows = false;
+            this.searchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(966, 338);
-            this.dataGridView1.TabIndex = 4;
+            this.searchDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.searchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchDataGridView.Location = new System.Drawing.Point(11, 87);
+            this.searchDataGridView.Name = "searchDataGridView";
+            this.searchDataGridView.ReadOnly = true;
+            this.searchDataGridView.Size = new System.Drawing.Size(966, 338);
+            this.searchDataGridView.TabIndex = 4;
             // 
-            // groupBox9
+            // searchGroupBox
             // 
-            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.searchGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox9.Controls.Add(this.comboBox8);
-            this.groupBox9.Controls.Add(this.label141);
-            this.groupBox9.Controls.Add(this.label142);
-            this.groupBox9.Controls.Add(this.dateTimePicker6);
-            this.groupBox9.Controls.Add(this.categoryLabel);
-            this.groupBox9.Controls.Add(this.searchViewButton);
-            this.groupBox9.Controls.Add(this.label94);
-            this.groupBox9.Controls.Add(this.dateTimePicker4);
-            this.groupBox9.Controls.Add(this.searchMethodsComboBox);
-            this.groupBox9.Controls.Add(this.activeIngredientTradeNameLabel);
-            this.groupBox9.Controls.Add(this.textBox12);
-            this.groupBox9.Location = new System.Drawing.Point(7, 20);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(968, 61);
-            this.groupBox9.TabIndex = 3;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Search";
+            this.searchGroupBox.Controls.Add(this.categoryLabel);
+            this.searchGroupBox.Controls.Add(this.searchCategoryComboBox);
+            this.searchGroupBox.Controls.Add(this.searchFromLabel);
+            this.searchGroupBox.Controls.Add(this.searchToLabel);
+            this.searchGroupBox.Controls.Add(this.searchToDateTimePicker);
+            this.searchGroupBox.Controls.Add(this.searchViewButton);
+            this.searchGroupBox.Controls.Add(this.searchChooseLabel);
+            this.searchGroupBox.Controls.Add(this.searchFromDateTimePicker);
+            this.searchGroupBox.Controls.Add(this.searchMethodsComboBox);
+            this.searchGroupBox.Controls.Add(this.searchActiveIngredientTradeNameLabel);
+            this.searchGroupBox.Controls.Add(this.searchMultipleOptionTextField);
+            this.searchGroupBox.Location = new System.Drawing.Point(7, 20);
+            this.searchGroupBox.Name = "searchGroupBox";
+            this.searchGroupBox.Size = new System.Drawing.Size(968, 61);
+            this.searchGroupBox.TabIndex = 3;
+            this.searchGroupBox.TabStop = false;
+            this.searchGroupBox.Text = "Search";
             // 
-            // comboBox8
+            // categoryLabel
             // 
-            this.comboBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.categoryLabel.AutoSize = true;
+            this.categoryLabel.Location = new System.Drawing.Point(329, 29);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(73, 17);
+            this.categoryLabel.TabIndex = 30;
+            this.categoryLabel.Text = "Category";
+            // 
+            // searchCategoryComboBox
+            // 
+            this.searchCategoryComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox8.BackColor = System.Drawing.SystemColors.Menu;
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.searchCategoryComboBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.searchCategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchCategoryComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCategoryComboBox.FormattingEnabled = true;
+            this.searchCategoryComboBox.Items.AddRange(new object[] {
             "Digestion",
             "Flu",
             "Sedative",
             "Cough Relieve",
             "Alergie"});
-            this.comboBox8.Location = new System.Drawing.Point(403, 25);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(168, 24);
-            this.comboBox8.TabIndex = 29;
+            this.searchCategoryComboBox.Location = new System.Drawing.Point(408, 25);
+            this.searchCategoryComboBox.Name = "searchCategoryComboBox";
+            this.searchCategoryComboBox.Size = new System.Drawing.Size(168, 24);
+            this.searchCategoryComboBox.TabIndex = 29;
             // 
-            // label141
+            // searchFromLabel
             // 
-            this.label141.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchFromLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(333, 29);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(49, 17);
-            this.label141.TabIndex = 24;
-            this.label141.Text = "From:";
+            this.searchFromLabel.AutoSize = true;
+            this.searchFromLabel.Location = new System.Drawing.Point(340, 28);
+            this.searchFromLabel.Name = "searchFromLabel";
+            this.searchFromLabel.Size = new System.Drawing.Size(49, 17);
+            this.searchFromLabel.TabIndex = 24;
+            this.searchFromLabel.Text = "From:";
             // 
-            // label142
+            // searchToLabel
             // 
-            this.label142.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchToLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(572, 30);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(32, 17);
-            this.label142.TabIndex = 26;
-            this.label142.Text = "To:";
+            this.searchToLabel.AutoSize = true;
+            this.searchToLabel.Location = new System.Drawing.Point(650, 28);
+            this.searchToLabel.Name = "searchToLabel";
+            this.searchToLabel.Size = new System.Drawing.Size(32, 17);
+            this.searchToLabel.TabIndex = 26;
+            this.searchToLabel.Text = "To:";
             // 
-            // dateTimePicker6
+            // searchToDateTimePicker
             // 
-            this.dateTimePicker6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchToDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker6.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker6.Location = new System.Drawing.Point(626, 26);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.ShowUpDown = true;
-            this.dateTimePicker6.Size = new System.Drawing.Size(116, 23);
-            this.dateTimePicker6.TabIndex = 25;
-            // 
-            // categoryLabel
-            // 
-            this.categoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.categoryLabel.AutoSize = true;
-            this.categoryLabel.Location = new System.Drawing.Point(333, 29);
-            this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(61, 17);
-            this.categoryLabel.TabIndex = 28;
-            this.categoryLabel.Text = "label29";
+            this.searchToDateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.searchToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.searchToDateTimePicker.Location = new System.Drawing.Point(694, 25);
+            this.searchToDateTimePicker.Name = "searchToDateTimePicker";
+            this.searchToDateTimePicker.ShowUpDown = true;
+            this.searchToDateTimePicker.Size = new System.Drawing.Size(116, 23);
+            this.searchToDateTimePicker.TabIndex = 25;
             // 
             // searchViewButton
             // 
@@ -1386,26 +1384,26 @@
             this.searchViewButton.UseVisualStyleBackColor = true;
             this.searchViewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
-            // label94
+            // searchChooseLabel
             // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(1, 29);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(67, 17);
-            this.label94.TabIndex = 19;
-            this.label94.Text = "Choose:";
+            this.searchChooseLabel.AutoSize = true;
+            this.searchChooseLabel.Location = new System.Drawing.Point(1, 29);
+            this.searchChooseLabel.Name = "searchChooseLabel";
+            this.searchChooseLabel.Size = new System.Drawing.Size(67, 17);
+            this.searchChooseLabel.TabIndex = 19;
+            this.searchChooseLabel.Text = "Choose:";
             // 
-            // dateTimePicker4
+            // searchFromDateTimePicker
             // 
-            this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchFromDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker4.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(390, 27);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.ShowUpDown = true;
-            this.dateTimePicker4.Size = new System.Drawing.Size(109, 23);
-            this.dateTimePicker4.TabIndex = 23;
+            this.searchFromDateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.searchFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.searchFromDateTimePicker.Location = new System.Drawing.Point(438, 26);
+            this.searchFromDateTimePicker.Name = "searchFromDateTimePicker";
+            this.searchFromDateTimePicker.ShowUpDown = true;
+            this.searchFromDateTimePicker.Size = new System.Drawing.Size(109, 23);
+            this.searchFromDateTimePicker.TabIndex = 23;
             // 
             // searchMethodsComboBox
             // 
@@ -1427,32 +1425,32 @@
             this.searchMethodsComboBox.Size = new System.Drawing.Size(251, 24);
             this.searchMethodsComboBox.TabIndex = 18;
             // 
-            // activeIngredientTradeNameLabel
+            // searchActiveIngredientTradeNameLabel
             // 
-            this.activeIngredientTradeNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchActiveIngredientTradeNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.activeIngredientTradeNameLabel.AutoSize = true;
-            this.activeIngredientTradeNameLabel.Location = new System.Drawing.Point(572, 29);
-            this.activeIngredientTradeNameLabel.Name = "activeIngredientTradeNameLabel";
-            this.activeIngredientTradeNameLabel.Size = new System.Drawing.Size(100, 17);
-            this.activeIngredientTradeNameLabel.TabIndex = 21;
-            this.activeIngredientTradeNameLabel.Text = "Tradename :";
+            this.searchActiveIngredientTradeNameLabel.AutoSize = true;
+            this.searchActiveIngredientTradeNameLabel.Location = new System.Drawing.Point(582, 29);
+            this.searchActiveIngredientTradeNameLabel.Name = "searchActiveIngredientTradeNameLabel";
+            this.searchActiveIngredientTradeNameLabel.Size = new System.Drawing.Size(100, 17);
+            this.searchActiveIngredientTradeNameLabel.TabIndex = 21;
+            this.searchActiveIngredientTradeNameLabel.Text = "Tradename :";
             // 
-            // textBox12
+            // searchMultipleOptionTextField
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchMultipleOptionTextField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(674, 24);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(138, 23);
-            this.textBox12.TabIndex = 27;
+            this.searchMultipleOptionTextField.Location = new System.Drawing.Point(694, 25);
+            this.searchMultipleOptionTextField.Name = "searchMultipleOptionTextField";
+            this.searchMultipleOptionTextField.Size = new System.Drawing.Size(138, 23);
+            this.searchMultipleOptionTextField.TabIndex = 27;
             // 
             // accountPageTab
             // 
             this.accountPageTab.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.accountPageTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.accountPageTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.accountPageTab.Controls.Add(this.groupBox2);
+            this.accountPageTab.Controls.Add(this.accountGroupBox);
             this.accountPageTab.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.accountPageTab.Location = new System.Drawing.Point(4, 29);
             this.accountPageTab.Name = "accountPageTab";
@@ -1460,85 +1458,85 @@
             this.accountPageTab.TabIndex = 5;
             this.accountPageTab.Text = "Account";
             // 
-            // groupBox2
+            // accountGroupBox
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.accountGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(7, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(855, 130);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Change Password";
+            this.accountGroupBox.Controls.Add(this.accountChangePasswordButton);
+            this.accountGroupBox.Controls.Add(this.accountRenterNewPassLabel);
+            this.accountGroupBox.Controls.Add(this.accountNewPassLabel);
+            this.accountGroupBox.Controls.Add(this.accountOldPassLabel);
+            this.accountGroupBox.Controls.Add(this.accountNewPasswordTextField);
+            this.accountGroupBox.Controls.Add(this.accountOldPasswordTextField);
+            this.accountGroupBox.Controls.Add(this.accountRenterNewPasswordTextField);
+            this.accountGroupBox.Location = new System.Drawing.Point(7, 13);
+            this.accountGroupBox.Name = "accountGroupBox";
+            this.accountGroupBox.Size = new System.Drawing.Size(855, 130);
+            this.accountGroupBox.TabIndex = 1;
+            this.accountGroupBox.TabStop = false;
+            this.accountGroupBox.Text = "Change Password";
             // 
-            // button3
+            // accountChangePasswordButton
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.Location = new System.Drawing.Point(724, 92);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 32);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Change";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.accountChangePasswordButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.accountChangePasswordButton.Location = new System.Drawing.Point(694, 92);
+            this.accountChangePasswordButton.Name = "accountChangePasswordButton";
+            this.accountChangePasswordButton.Size = new System.Drawing.Size(155, 32);
+            this.accountChangePasswordButton.TabIndex = 4;
+            this.accountChangePasswordButton.Text = "Change Password";
+            this.accountChangePasswordButton.UseVisualStyleBackColor = true;
+            this.accountChangePasswordButton.Click += new System.EventHandler(this.accountChangePasswordButton_Click);
             // 
-            // label5
+            // accountRenterNewPassLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 92);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Re-enter new password:";
+            this.accountRenterNewPassLabel.AutoSize = true;
+            this.accountRenterNewPassLabel.Location = new System.Drawing.Point(6, 92);
+            this.accountRenterNewPassLabel.Name = "accountRenterNewPassLabel";
+            this.accountRenterNewPassLabel.Size = new System.Drawing.Size(183, 17);
+            this.accountRenterNewPassLabel.TabIndex = 5;
+            this.accountRenterNewPassLabel.Text = "Re-enter new password:";
             // 
-            // label4
+            // accountNewPassLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Enter new password:";
+            this.accountNewPassLabel.AutoSize = true;
+            this.accountNewPassLabel.Location = new System.Drawing.Point(6, 56);
+            this.accountNewPassLabel.Name = "accountNewPassLabel";
+            this.accountNewPassLabel.Size = new System.Drawing.Size(158, 17);
+            this.accountNewPassLabel.TabIndex = 4;
+            this.accountNewPassLabel.Text = "Enter new password:";
             // 
-            // label3
+            // accountOldPassLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Old password:";
+            this.accountOldPassLabel.AutoSize = true;
+            this.accountOldPassLabel.Location = new System.Drawing.Point(6, 28);
+            this.accountOldPassLabel.Name = "accountOldPassLabel";
+            this.accountOldPassLabel.Size = new System.Drawing.Size(111, 17);
+            this.accountOldPassLabel.TabIndex = 3;
+            this.accountOldPassLabel.Text = "Old password:";
             // 
-            // textBox4
+            // accountNewPasswordTextField
             // 
-            this.textBox4.Location = new System.Drawing.Point(210, 50);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.UseSystemPasswordChar = true;
+            this.accountNewPasswordTextField.Location = new System.Drawing.Point(210, 50);
+            this.accountNewPasswordTextField.Name = "accountNewPasswordTextField";
+            this.accountNewPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountNewPasswordTextField.TabIndex = 2;
+            this.accountNewPasswordTextField.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // accountOldPasswordTextField
             // 
-            this.textBox3.Location = new System.Drawing.Point(210, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.accountOldPasswordTextField.Location = new System.Drawing.Point(210, 19);
+            this.accountOldPasswordTextField.Name = "accountOldPasswordTextField";
+            this.accountOldPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountOldPasswordTextField.TabIndex = 1;
+            this.accountOldPasswordTextField.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // accountRenterNewPasswordTextField
             // 
-            this.textBox2.Location = new System.Drawing.Point(210, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.accountRenterNewPasswordTextField.Location = new System.Drawing.Point(210, 89);
+            this.accountRenterNewPasswordTextField.Name = "accountRenterNewPasswordTextField";
+            this.accountRenterNewPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountRenterNewPasswordTextField.TabIndex = 3;
+            this.accountRenterNewPasswordTextField.UseSystemPasswordChar = true;
             // 
             // comboBox25
             // 
@@ -1616,38 +1614,38 @@
             this.addPageTab.ResumeLayout(false);
             this.addDataTabControl.ResumeLayout(false);
             this.addMedicineTabPage.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.addMedicineGroupBox.ResumeLayout(false);
+            this.addMedicineGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getMedicinesByCategoryBindingSource)).EndInit();
             this.addCustomerTabPage.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.addCustomerGroupBox.ResumeLayout(false);
+            this.addCustomerGroupBox.PerformLayout();
             this.addPurchaseTabPage.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.addPurchaseGroupBox.ResumeLayout(false);
+            this.addPurchaseGroupBox.PerformLayout();
             this.editPageTab.ResumeLayout(false);
             this.editDataTablControl.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.editMedicineGroupBox.ResumeLayout(false);
+            this.editMedicineGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getMedicinesBarCodeBindingSource)).EndInit();
             this.tabPage9.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.editCustomerGroupBox.ResumeLayout(false);
+            this.editCustomerGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getcustomersBindingSource)).EndInit();
             this.deletePageTab.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.deleteCustomerGroupBox.ResumeLayout(false);
+            this.deleteCustomerGroupBox.PerformLayout();
+            this.deleteOrderGroupBox.ResumeLayout(false);
+            this.deleteOrderGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getordersBindingSource)).EndInit();
             this.searchPageTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchDataGridView)).EndInit();
+            this.searchGroupBox.ResumeLayout(false);
+            this.searchGroupBox.PerformLayout();
             this.accountPageTab.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.accountGroupBox.ResumeLayout(false);
+            this.accountGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1681,92 +1679,91 @@
         private System.Windows.Forms.TabPage editPageTab;
         private System.Windows.Forms.TabPage searchPageTab;
         private System.Windows.Forms.TabPage accountPageTab;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox accountGroupBox;
+        private System.Windows.Forms.Button accountChangePasswordButton;
+        private System.Windows.Forms.Label accountRenterNewPassLabel;
+        private System.Windows.Forms.Label accountNewPassLabel;
+        private System.Windows.Forms.Label accountOldPassLabel;
+        private System.Windows.Forms.TextBox accountNewPasswordTextField;
+        private System.Windows.Forms.TextBox accountOldPasswordTextField;
+        private System.Windows.Forms.TextBox accountRenterNewPasswordTextField;
         private System.Windows.Forms.TabControl editDataTablControl;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox addCustomerGroupBox;
         private System.Windows.Forms.RichTextBox addCustomerCommentsTextField;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label addCustomerCommentsLabel;
         private System.Windows.Forms.TextBox addCustomerTelephoneTextField;
         private System.Windows.Forms.TextBox addCustomerAddressTextField;
         private System.Windows.Forms.TextBox addCustomerNameTextField;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label addCustomerTelephoneNumbLabel;
+        private System.Windows.Forms.Label addCustomerAddressLabel;
+        private System.Windows.Forms.Label addCustomerNameLabel;
         private System.Windows.Forms.Button addCustomerAddButton;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox editCustomerGroupBox;
         private System.Windows.Forms.RichTextBox editCustomerCommentsTextField;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label editCustomerCommentsLabel;
         private System.Windows.Forms.TextBox editCustomerTelephoneTextField;
         private System.Windows.Forms.TextBox editCustomerAddressTextField;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label editCustomerTelephoneNumbLabel;
+        private System.Windows.Forms.Label editCustomerAddressLabel;
+        private System.Windows.Forms.Label editCustomerNameLabel;
         private System.Windows.Forms.Button editCustomerButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label142;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DataGridView searchDataGridView;
+        private System.Windows.Forms.GroupBox searchGroupBox;
+        private System.Windows.Forms.Label searchToLabel;
+        private System.Windows.Forms.DateTimePicker searchToDateTimePicker;
+        private System.Windows.Forms.Label searchFromLabel;
+        private System.Windows.Forms.DateTimePicker searchFromDateTimePicker;
         private System.Windows.Forms.Button searchViewButton;
-        private System.Windows.Forms.Label activeIngredientTradeNameLabel;
-        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label searchActiveIngredientTradeNameLabel;
+        private System.Windows.Forms.Label searchChooseLabel;
         private System.Windows.Forms.ComboBox searchMethodsComboBox;
         private System.Windows.Forms.ComboBox editCustomerNameComboBox;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox addMedicineGroupBox;
+        private System.Windows.Forms.Label addMedicineBarCodeLabel;
         private System.Windows.Forms.Button addMedicineAddButton;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label addMedicineCategoryLabel;
+        private System.Windows.Forms.Label addMedicinePriceOfSaleLabel;
         private System.Windows.Forms.TextBox addMedicineConcectrationTextField;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label addMedicineConcentrationLabel;
         private System.Windows.Forms.TextBox addMedicinePriceOfSaleTextField;
         private System.Windows.Forms.TextBox addMedicineBarcodeTextField;
         private System.Windows.Forms.TextBox addMedicineActiveIngrdTextField;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label addMedicineTradeNameLabel;
+        private System.Windows.Forms.Label addMedicineActiveIngredientLabel;
         private System.Windows.Forms.TextBox addMedicineTradeNameTextField;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox editMedicineGroupBox;
         private System.Windows.Forms.ComboBox editMedicineBarcodeComboBox;
         private System.Windows.Forms.ComboBox editMedicineCategoryComboBox;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label editMedicineBarCodeLabel;
         private System.Windows.Forms.Button editMedicineButton;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label editMedicineCategoryLabel;
+        private System.Windows.Forms.Label editMedicinePriceOfSaleLabel;
         private System.Windows.Forms.TextBox editMedicineConcentrationTextField;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label editMedicineConcentrationLabel;
         private System.Windows.Forms.TextBox editMedicinePriceOfSaleTextField;
         private System.Windows.Forms.TextBox editMedicineActiveIngredientTextField;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label editMedicineTradenameLabel;
+        private System.Windows.Forms.Label editMedicineActiveIngredientLabel;
         private System.Windows.Forms.TextBox editMedicineTradeNameTextField;
         private System.Windows.Forms.TabPage deletePageTab;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox deleteCustomerGroupBox;
         private System.Windows.Forms.Button deleteCustomerButton;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label deleteCustomerNameLabel;
         private System.Windows.Forms.ComboBox deleteCustomerNameComboBox;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox deleteOrderGroupBox;
         private System.Windows.Forms.Button deleteOrderButton;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label deleteOrderTransNumbLabel;
         private System.Windows.Forms.ComboBox deleteOrderTransNumberComboBox;
         private System.Windows.Forms.TabPage addPurchaseTabPage;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox addPurchaseGroupBox;
         private System.Windows.Forms.DateTimePicker addPurchaseDateTimePicker;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label addPurchaseDateLabel;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button addPurchaseAddButton;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label categoryLabel;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.TextBox searchMultipleOptionTextField;
+        private System.Windows.Forms.ComboBox searchCategoryComboBox;
         private PharmacyDataSet pharmacyDataSet;
         private System.Windows.Forms.BindingSource getMedicinesBarCodeBindingSource;
         private PharmacyDataSetTableAdapters.getMedicinesBarCodeTableAdapter getMedicinesBarCodeTableAdapter;
@@ -1781,13 +1778,14 @@
         private System.Windows.Forms.TextBox addMedicineCategoryTextField;
         private System.Windows.Forms.ComboBox addMedicineCategoryComboBox;
         private System.Windows.Forms.CheckBox addMedicineNewCategoryCheckBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label orderTotalPriceLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicinePriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
-        private System.Windows.Forms.Label totalPriceValueTextLabel;
+        private System.Windows.Forms.Label orderTotalPriceValueTextLabel;
+        private System.Windows.Forms.Label categoryLabel;
 
 
     }

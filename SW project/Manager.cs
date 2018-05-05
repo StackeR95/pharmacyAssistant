@@ -21,14 +21,14 @@ namespace SW_project
             InitializeComponent();
             addMedicineCategoryTextField.Visible = false;
             stocklevel();
-            activeIngredientTradeNameLabel.Hide();
-            textBox12.Hide();
-            comboBox8.Hide();
+            searchActiveIngredientTradeNameLabel.Hide();
+            searchMultipleOptionTextField.Hide();
+            searchCategoryComboBox.Hide();
             categoryLabel.Hide();
-            label141.Hide();
-            label142.Hide();
-            dateTimePicker6.Hide();
-            dateTimePicker4.Hide();
+            searchFromLabel.Hide();
+            searchToLabel.Hide();
+            searchToDateTimePicker.Hide();
+            searchFromDateTimePicker.Hide();
             toolStripStatusLabel1.Text = "Logged in as: " + username1;
             toolStripStatusLabel2.Text = "            Stock Level: ";
             refreshComboBoxes();
@@ -88,24 +88,24 @@ namespace SW_project
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
+        private void accountChangePasswordButton_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text.Trim() != string.Empty && textBox3.Text.Trim() != string.Empty && textBox4.Text.Trim() != string.Empty) {
-                if (textBox2.Text == textBox4.Text)
+            if (accountRenterNewPasswordTextField.Text.Trim() != string.Empty && accountOldPasswordTextField.Text.Trim() != string.Empty && accountNewPasswordTextField.Text.Trim() != string.Empty) {
+                if (accountRenterNewPasswordTextField.Text == accountNewPasswordTextField.Text)
                 {
-                    int flag = controller.CheckAccountPassword(username1, textBox3.Text);
+                    int flag = controller.CheckAccountPassword(username1, accountOldPasswordTextField.Text);
                     if (flag == 1)
                     {
-                        int result = controller.ChangePassword(username1, textBox2.Text);
+                        int result = controller.ChangePassword(username1, accountRenterNewPasswordTextField.Text);
                         if (result == 1)
                         {
-                            MessageBox.Show("Password changed, please relogin");
+                            MessageBox.Show("Password changed, please relogin","Success",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                             this.Close();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Old password is wrong");
+                        MessageBox.Show("Old password is wrong","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
 
 
@@ -184,7 +184,7 @@ namespace SW_project
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void editMedicineButton_Click(object sender, EventArgs e)
         {
             if (editMedicinePriceOfSaleTextField.Text.Trim() != string.Empty && editMedicineConcentrationTextField.Text.Trim() != string.Empty && editMedicineTradeNameTextField.Text.Trim() != string.Empty && editMedicineActiveIngredientTextField.Text.Trim() != string.Empty)
             {
@@ -201,11 +201,11 @@ namespace SW_project
             }
             else
             {
-                MessageBox.Show("One of the fields is empty. Please enter inputs.");
+                MessageBox.Show("One of the fields is empty. Please enter inputs.","Error Input",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void editCustomerButton_Click(object sender, EventArgs e)
         {
             if (editCustomerTelephoneTextField.Text.Trim() != string.Empty && editCustomerAddressTextField.Text.Trim() != string.Empty) {
                 int result = controller.EditCustomer(Int32.Parse(editCustomerNameComboBox.SelectedValue.GetHashCode().ToString()), editCustomerNameComboBox.Text, editCustomerAddressTextField.Text, editCustomerCommentsTextField.Text, editCustomerTelephoneTextField.Text);
@@ -215,7 +215,7 @@ namespace SW_project
                 }
                 else
                 {
-                    MessageBox.Show("Customer Updated Successfully");
+                    MessageBox.Show("Customer Updated Successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 }
                 refreshComboBoxes();
             }
@@ -230,7 +230,7 @@ namespace SW_project
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void deleteCustomerButton_Click(object sender, EventArgs e)
         {
             
                 int c = Int32.Parse(deleteCustomerNameComboBox.SelectedValue.GetHashCode().ToString());
@@ -251,7 +251,15 @@ namespace SW_project
 
         private void addNewOrderButton_Click_1(object sender, EventArgs e)
         {
-            totalPriceValueTextLabel.Visible = true;
+            if (orderDescriptionGridView.Rows.Count > 0)
+            {
+                if(orderDescriptionGridView.Rows[orderDescriptionGridView.Rows.Count-1].Cells[1].Value.ToString()==orderChooseMedicineComboBox.SelectedValue.ToString())
+                {
+                    MessageBox.Show("You have already chosen this medicine before , either delete the row or add new medicine ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            orderTotalPriceValueTextLabel.Visible = true;
             if (orderQuantityTextField.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("One of the fields is empty. Please enter inputs.");
@@ -285,9 +293,9 @@ namespace SW_project
                     else
                     {
                         orderDescriptionGridView.Rows.Add(row);
-                        Double currentTotalPrice = Double.Parse(totalPriceValueTextLabel.Text.ToString());
+                        Double currentTotalPrice = Double.Parse(orderTotalPriceValueTextLabel.Text.ToString());
                         currentTotalPrice += totalPrice;
-                        totalPriceValueTextLabel.Text = currentTotalPrice.ToString();
+                        orderTotalPriceValueTextLabel.Text = currentTotalPrice.ToString();
                     }
                 }
             }
@@ -313,6 +321,8 @@ namespace SW_project
                 orderQuantityTextField.Clear();
                 orderrec Or = new orderrec(transno);
                 Or.Show();
+                orderTotalPriceValueTextLabel.Text = "0";
+                orderTotalPriceValueTextLabel.Visible = false;
             }
             else
             {
@@ -336,7 +346,7 @@ namespace SW_project
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void addPurchaseAddButton_Click(object sender, EventArgs e)
         {
             
                 int result = controller.InsertPurchases(addPurchaseDateTimePicker.Text);
@@ -377,50 +387,50 @@ namespace SW_project
         }
         private void searchMethodsComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            activeIngredientTradeNameLabel.Hide();
-            textBox12.Hide();
-            comboBox8.Hide();
+            searchActiveIngredientTradeNameLabel.Hide();
+            searchMultipleOptionTextField.Hide();
+            searchCategoryComboBox.Hide();
             categoryLabel.Hide();
-            label141.Hide();
-            label142.Hide();
-            dateTimePicker6.Hide();
-            dateTimePicker4.Hide();
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
+            searchFromLabel.Hide();
+            searchToLabel.Hide();
+            searchToDateTimePicker.Hide();
+            searchFromDateTimePicker.Hide();
+            searchDataGridView.DataSource = null;
+            searchDataGridView.Refresh();
             if (searchMethodsComboBox.Text == "All Medicine ")
             {
             }
             if (searchMethodsComboBox.Text == "Selected Medicine by ingredient")
             {
-                activeIngredientTradeNameLabel.Show();
-                activeIngredientTradeNameLabel.Text = "Active ing.:";
-                textBox12.Show();
-                comboBox8.Show();
+                searchActiveIngredientTradeNameLabel.Show();
+                searchActiveIngredientTradeNameLabel.Text = "Active ing.:";
+                searchMultipleOptionTextField.Show();
+                searchCategoryComboBox.Show();
                 categoryLabel.Show();
                 categoryLabel.Text = "Category:";
             }
             if (searchMethodsComboBox.Text == "Selected Medicine by name")
             {
-                activeIngredientTradeNameLabel.Show();
-                activeIngredientTradeNameLabel.Text = "Tradename:";
-                textBox12.Show();
-                comboBox8.Show();
+                searchActiveIngredientTradeNameLabel.Show();
+                searchActiveIngredientTradeNameLabel.Text = "Tradename:";
+                searchMultipleOptionTextField.Show();
+                searchCategoryComboBox.Show();
                 categoryLabel.Show();
                 categoryLabel.Text = "Category:";
             }
             if (searchMethodsComboBox.Text == "Purcshases in period")
             {
-                label141.Show();
-                label142.Show();
-                dateTimePicker6.Show();
-                dateTimePicker4.Show();
+                searchFromLabel.Show();
+                searchToLabel.Show();
+                searchToDateTimePicker.Show();
+                searchFromDateTimePicker.Show();
             }
             if (searchMethodsComboBox.Text == "Sales in period")
             {
-                label141.Show();
-                label142.Show();
-                dateTimePicker6.Show();
-                dateTimePicker4.Show();
+                searchFromLabel.Show();
+                searchToLabel.Show();
+                searchToDateTimePicker.Show();
+                searchFromDateTimePicker.Show();
             }
             if (searchMethodsComboBox.Text == "All Customers")
             {
@@ -428,9 +438,9 @@ namespace SW_project
             }
             if (searchMethodsComboBox.Text == "Selected customer by tel.")
             {
-                activeIngredientTradeNameLabel.Show();
-                activeIngredientTradeNameLabel.Text = "Telephone: ";
-                textBox12.Show();
+                searchActiveIngredientTradeNameLabel.Show();
+                searchActiveIngredientTradeNameLabel.Text = "Telephone: ";
+                searchMultipleOptionTextField.Show();
             }
 
         }
@@ -441,54 +451,66 @@ namespace SW_project
             if (searchMethodsComboBox.Text == "All Medicine ")
             {
                 DataTable dt = controller.AllStock() ;
-                dataGridView1.DataSource = dt;
-                dataGridView1.Refresh();
+                searchDataGridView.DataSource = dt;
+                searchDataGridView.Refresh();
             }
             if (searchMethodsComboBox.Text == "Selected Medicine by ingredient")
             {
-                DataTable dt0 = controller.SearchIng(textBox12.Text.ToString(), comboBox8.Text.ToString());
-                dataGridView1.DataSource = dt0;
-                dataGridView1.Refresh();
+                DataTable dt0 = controller.SearchIng(searchMultipleOptionTextField.Text.ToString(), searchCategoryComboBox.Text.ToString());
+                searchDataGridView.DataSource = dt0;
+                searchDataGridView.Refresh();
+                if (dt0 == null)
+                {
+                    MessageBox.Show("Please check your inputs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             if (searchMethodsComboBox.Text == "Selected Medicine by name")
             {
-                DataTable dt0 = controller.SearchName(textBox12.Text.ToString(), comboBox8.Text.ToString());
-                dataGridView1.DataSource = dt0;
-                dataGridView1.Refresh();
+                DataTable dt0 = controller.SearchName(searchMultipleOptionTextField.Text.ToString(), searchCategoryComboBox.Text.ToString());
+                searchDataGridView.DataSource = dt0;
+                searchDataGridView.Refresh();
+                if (dt0 == null)
+                {
+                    MessageBox.Show("Please check your inputs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             if (searchMethodsComboBox.Text == "Medicine out of stock")
             {
                 DataTable dt0 = controller.OutofStock(); ;
-                dataGridView1.DataSource = dt0;
-                dataGridView1.Refresh();
+                searchDataGridView.DataSource = dt0;
+                searchDataGridView.Refresh();
+                if(dt0==null)
+                {
+                    MessageBox.Show("All Medicine Are In Stock", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
             }
             if (searchMethodsComboBox.Text == "Purcshases in period")
             {
-                string date1 = dateTimePicker4.Text;
-                string date2 = dateTimePicker6.Text;
+                string date1 = searchFromDateTimePicker.Text;
+                string date2 = searchToDateTimePicker.Text;
                 DataTable dt100 = controller.purchasesinperiod(date1, date2);
-                dataGridView1.DataSource = dt100;
-                dataGridView1.Refresh();
+                searchDataGridView.DataSource = dt100;
+                searchDataGridView.Refresh();
             }
             if (searchMethodsComboBox.Text == "Sales in period")
             {
-                string date1 = dateTimePicker4.Text;
-                string date2 = dateTimePicker6.Text;
+                string date1 = searchFromDateTimePicker.Text;
+                string date2 = searchToDateTimePicker.Text;
                 DataTable dt100 = controller.salesinperiod(date1, date2);
-                dataGridView1.DataSource = dt100;
-                dataGridView1.Refresh();
+                searchDataGridView.DataSource = dt100;
+                searchDataGridView.Refresh();
             }
             if (searchMethodsComboBox.Text == "All Customers")
             {
                 DataTable dt = controller.get_all_customers();
-                dataGridView1.DataSource = dt;
-                dataGridView1.Refresh();
+                searchDataGridView.DataSource = dt;
+                searchDataGridView.Refresh();
             }
             if (searchMethodsComboBox.Text == "Selected customer by tel.")
             {
-                DataTable dt0 = controller.SearchCustomers(textBox12.Text.ToString());
-                dataGridView1.DataSource = dt0;
-                dataGridView1.Refresh();
+                DataTable dt0 = controller.SearchCustomers(searchMultipleOptionTextField.Text.ToString());
+                searchDataGridView.DataSource = dt0;
+                searchDataGridView.Refresh();
             }
             refreshComboBoxes();
         
