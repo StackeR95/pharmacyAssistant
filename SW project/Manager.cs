@@ -234,20 +234,24 @@ namespace SW_project
 
         private void deleteCustomerButton_Click(object sender, EventArgs e) //Delete customer button Handler
         {
-            
-                int c = Int32.Parse(deleteCustomerNameComboBox.SelectedValue.GetHashCode().ToString()); //get Customer Primary Key Number from selected combobox value
-                int result = controller.DeleteCustomer(c);// Pass the customer number to the stored procedure 
-                if (result == 0)
+                if(deleteCustomerNameComboBox.SelectedValue!=null)
                 {
-                    MessageBox.Show("Nothing have been deleted, recheck inputs");
+                    int c = Int32.Parse(deleteCustomerNameComboBox.SelectedValue.GetHashCode().ToString()); //get Customer Primary Key Number from selected combobox value
+                    int result = controller.DeleteCustomer(c);// Pass the customer number to the stored procedure 
+                    if (result == 0)
+                    {
+                        MessageBox.Show("Nothing have been deleted, recheck inputs");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Customer deleted Successfully");
+                    }
+                    refreshComboBoxes(); // refresh all comboboxes data 
                 }
                 else
                 {
-                    MessageBox.Show("Customer deleted Successfully");
+                    MessageBox.Show("No Customers to be deleted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                refreshComboBoxes(); // refresh all comboboxes data 
-            
-          
 
         }
 
@@ -374,17 +378,25 @@ namespace SW_project
 
         private void deleteOrderButton_Click(object sender, EventArgs e) //delete order function
         {
-            int transaction_no = Int32.Parse(deleteOrderTransNumberComboBox.SelectedValue.GetHashCode().ToString()); // get order number
-                int result = controller.DeleteOrder(transaction_no);
-                if (result == 0)
+                if(deleteOrderTransNumberComboBox.SelectedValue!=null)
                 {
-                    MessageBox.Show("Nothing have been updated, recheck inputs");
+                    int transaction_no = Int32.Parse(deleteOrderTransNumberComboBox.SelectedValue.GetHashCode().ToString()); // get order number
+                    int result = controller.DeleteOrder(transaction_no);
+                    if (result == 0)
+                    {
+                        MessageBox.Show("Nothing have been updated, recheck inputs");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Order deleted Successfully");
+                    }
+                    refreshComboBoxes();
                 }
                 else
                 {
-                    MessageBox.Show("Order deleted Successfully");
+                    MessageBox.Show("Nothing to be deleted","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
-                refreshComboBoxes();
+
 
         }
         private void searchMethodsComboBox_SelectedIndexChanged(object sender, System.EventArgs e) // This function hanldes triggering the views upon user selection

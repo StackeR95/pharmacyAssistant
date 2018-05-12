@@ -35,10 +35,10 @@ D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Pro
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Manager.resources
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.OrderReceipt.resources
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Properties.Resources.resources
-D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.Purchasesconcs.resources
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.csproj.GenerateResource.Cache
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.exe.manifest
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.application
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.exe
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.pdb
 D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW project.csprojResolveAssemblyReference.cache
+D:\Gam3a\Senior 2\Spring 2018\Software Tany\Our Project\Software Engineering Project\SW project\obj\Debug\SW_project.PurchasesWindow.resources
