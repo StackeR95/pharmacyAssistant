@@ -15,7 +15,7 @@ namespace SW_project
         Controller controller;
         public Login()
         {
-            controller = new Controller();
+            controller = Controller.getControllerInstance();
             InitializeComponent();
         }
 

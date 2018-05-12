@@ -26,8 +26,8 @@ namespace SW_project.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AHMED-PC\\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AHMEDADEL-PC\\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=" +
+            "True")]
         public string PharmacyConnectionString {
             get {
                 return ((string)(this["PharmacyConnectionString"]));

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="SW_project.Controller">
+    <Position X="1.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AuAKAIIACBECggBIBQAAAAAAAAAAQAMAAEAAQAsAAUA=</HashCode>
+      <FileName>Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.DBManager">
+    <Position X="8.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAACAAAAAEAFAAAIAACAABAAAAAAAAAAA=</HashCode>
+      <FileName>DBManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.StoredProcedures">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AsACAIKAABECggBIByAAAQQAAAQAQAEAAAABABAAAQA=</HashCode>
+      <FileName>StoredProcedures.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.Manager">
+    <Position X="6" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="accountChangePasswordButton" Hidden="true" />
+      <Field Name="accountGroupBox" Hidden="true" />
+      <Field Name="accountNewPassLabel" Hidden="true" />
+      <Field Name="accountNewPasswordTextField" Hidden="true" />
+      <Field Name="accountOldPassLabel" Hidden="true" />
+      <Field Name="accountOldPasswordTextField" Hidden="true" />
+      <Field Name="accountPageTab" Hidden="true" />
+      <Field Name="accountRenterNewPassLabel" Hidden="true" />
+      <Field Name="accountRenterNewPasswordTextField" Hidden="true" />
+      <Field Name="addCustomerAddButton" Hidden="true" />
+      <Field Name="addCustomerAddressLabel" Hidden="true" />
+      <Field Name="addCustomerAddressTextField" Hidden="true" />
+      <Field Name="addCustomerCommentsLabel" Hidden="true" />
+      <Field Name="addCustomerCommentsTextField" Hidden="true" />
+      <Field Name="addCustomerGroupBox" Hidden="true" />
+      <Field Name="addCustomerNameLabel" Hidden="true" />
+      <Field Name="addCustomerNameTextField" Hidden="true" />
+      <Field Name="addCustomerTabPage" Hidden="true" />
+      <Field Name="addCustomerTelephoneNumbLabel" Hidden="true" />
+      <Field Name="addCustomerTelephoneTextField" Hidden="true" />
+      <Field Name="addDataTabControl" Hidden="true" />
+      <Field Name="addMedicineActiveIngrdTextField" Hidden="true" />
+      <Field Name="addMedicineActiveIngredientLabel" Hidden="true" />
+      <Field Name="addMedicineAddButton" Hidden="true" />
+      <Field Name="addMedicineBarCodeLabel" Hidden="true" />
+      <Field Name="addMedicineBarcodeTextField" Hidden="true" />
+      <Field Name="addMedicineCategoryComboBox" Hidden="true" />
+      <Field Name="addMedicineCategoryLabel" Hidden="true" />
+      <Field Name="addMedicineCategoryTextField" Hidden="true" />
+      <Field Name="addMedicineConcectrationTextField" Hidden="true" />
+      <Field Name="addMedicineConcentrationLabel" Hidden="true" />
+      <Field Name="addMedicineGroupBox" Hidden="true" />
+      <Field Name="addMedicineNewCategoryCheckBox" Hidden="true" />
+      <Field Name="addMedicinePriceOfSaleLabel" Hidden="true" />
+      <Field Name="addMedicinePriceOfSaleTextField" Hidden="true" />
+      <Field Name="addMedicineTabPage" Hidden="true" />
+      <Field Name="addMedicineTradeNameLabel" Hidden="true" />
+      <Field Name="addMedicineTradeNameTextField" Hidden="true" />
+      <Field Name="addNewOrderButton" Hidden="true" />
+      <Field Name="addPageTab" Hidden="true" />
+      <Field Name="addPurchaseAddButton" Hidden="true" />
+      <Field Name="addPurchaseDateLabel" Hidden="true" />
+      <Field Name="addPurchaseDateTimePicker" Hidden="true" />
+      <Field Name="addPurchaseGroupBox" Hidden="true" />
+      <Field Name="addPurchaseTabPage" Hidden="true" />
+      <Field Name="button11" Hidden="true" />
+      <Field Name="button26" Hidden="true" />
+      <Field Name="categoryLabel" Hidden="true" />
+      <Field Name="Column1" Hidden="true" />
+      <Field Name="Column2" Hidden="true" />
+      <Field Name="Column3" Hidden="true" />
+      <Field Name="comboBox25" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="deleteCustomerButton" Hidden="true" />
+      <Field Name="deleteCustomerGroupBox" Hidden="true" />
+      <Field Name="deleteCustomerNameComboBox" Hidden="true" />
+      <Field Name="deleteCustomerNameLabel" Hidden="true" />
+      <Field Name="deleteOrderButton" Hidden="true" />
+      <Field Name="deleteOrderGroupBox" Hidden="true" />
+      <Field Name="deleteOrderTransNumberComboBox" Hidden="true" />
+      <Field Name="deleteOrderTransNumbLabel" Hidden="true" />
+      <Field Name="deletePageTab" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="editCustomerAddressLabel" Hidden="true" />
+      <Field Name="editCustomerAddressTextField" Hidden="true" />
+      <Field Name="editCustomerButton" Hidden="true" />
+      <Field Name="editCustomerCommentsLabel" Hidden="true" />
+      <Field Name="editCustomerCommentsTextField" Hidden="true" />
+      <Field Name="editCustomerGroupBox" Hidden="true" />
+      <Field Name="editCustomerNameComboBox" Hidden="true" />
+      <Field Name="editCustomerNameLabel" Hidden="true" />
+      <Field Name="editCustomerTelephoneNumbLabel" Hidden="true" />
+      <Field Name="editCustomerTelephoneTextField" Hidden="true" />
+      <Field Name="editDataTablControl" Hidden="true" />
+      <Field Name="editMedicineActiveIngredientLabel" Hidden="true" />
+      <Field Name="editMedicineActiveIngredientTextField" Hidden="true" />
+      <Field Name="editMedicineBarcodeComboBox" Hidden="true" />
+      <Field Name="editMedicineBarCodeLabel" Hidden="true" />
+      <Field Name="editMedicineButton" Hidden="true" />
+      <Field Name="editMedicineCategoryComboBox" Hidden="true" />
+      <Field Name="editMedicineCategoryLabel" Hidden="true" />
+      <Field Name="editMedicineConcentrationLabel" Hidden="true" />
+      <Field Name="editMedicineConcentrationTextField" Hidden="true" />
+      <Field Name="editMedicineGroupBox" Hidden="true" />
+      <Field Name="editMedicinePriceOfSaleLabel" Hidden="true" />
+      <Field Name="editMedicinePriceOfSaleTextField" Hidden="true" />
+      <Field Name="editMedicineTradenameLabel" Hidden="true" />
+      <Field Name="editMedicineTradeNameTextField" Hidden="true" />
+      <Field Name="editPageTab" Hidden="true" />
+      <Field Name="getcustomersBindingSource" Hidden="true" />
+      <Field Name="getcustomersTableAdapter" Hidden="true" />
+      <Field Name="getMedicinesBarCodeBindingSource" Hidden="true" />
+      <Field Name="getMedicinesBarCodeTableAdapter" Hidden="true" />
+      <Field Name="getMedicinesByCategoryBindingSource" Hidden="true" />
+      <Field Name="getMedicinesByCategoryTableAdapter" Hidden="true" />
+      <Field Name="getordersBindingSource" Hidden="true" />
+      <Field Name="getordersTableAdapter" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label90" Hidden="true" />
+      <Field Name="ManagerTabs" Hidden="true" />
+      <Field Name="medicinePriceColumn" Hidden="true" />
+      <Field Name="orderChooseMedicineComboBox" Hidden="true" />
+      <Field Name="orderChooseMedicineLabel" Hidden="true" />
+      <Field Name="orderDataGroupBox" Hidden="true" />
+      <Field Name="orderDescriptionGridView" Hidden="true" />
+      <Field Name="orderNewOrderButton" Hidden="true" />
+      <Field Name="orderPageTab" Hidden="true" />
+      <Field Name="orderQuantityLabel" Hidden="true" />
+      <Field Name="orderQuantityTextField" Hidden="true" />
+      <Field Name="orderTotalPriceLabel" Hidden="true" />
+      <Field Name="orderTotalPriceValueTextLabel" Hidden="true" />
+      <Field Name="pharmacyDataSet" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="searchActiveIngredientTradeNameLabel" Hidden="true" />
+      <Field Name="searchCategoryComboBox" Hidden="true" />
+      <Field Name="searchChooseLabel" Hidden="true" />
+      <Field Name="searchDataGridView" Hidden="true" />
+      <Field Name="searchFromDateTimePicker" Hidden="true" />
+      <Field Name="searchFromLabel" Hidden="true" />
+      <Field Name="searchGroupBox" Hidden="true" />
+      <Field Name="searchMethodsComboBox" Hidden="true" />
+      <Field Name="searchMultipleOptionTextField" Hidden="true" />
+      <Field Name="searchPageTab" Hidden="true" />
+      <Field Name="searchToDateTimePicker" Hidden="true" />
+      <Field Name="searchToLabel" Hidden="true" />
+      <Field Name="searchViewButton" Hidden="true" />
+      <Field Name="statusStrip1" Hidden="true" />
+      <Field Name="stockBindingSource" Hidden="true" />
+      <Field Name="stockTableAdapter" Hidden="true" />
+      <Field Name="tabPage7" Hidden="true" />
+      <Field Name="tabPage9" Hidden="true" />
+      <Field Name="toolStripDropDownButton1" Hidden="true" />
+      <Field Name="toolStripDropDownButton2" Hidden="true" />
+      <Field Name="toolStripStatusLabel1" Hidden="true" />
+      <Field Name="toolStripStatusLabel2" Hidden="true" />
+      <Field Name="totalPrice" Hidden="true" />
+      <Field Name="username1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>PjZ1RC9KM3GpAhuZ+VT9tOVHWBM5QCoEYYd10CTSkg0=</HashCode>
+      <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.Login">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <Members>
+      <Field Name="backgroundWorker1" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="loginButton" Hidden="true" />
+      <Field Name="passwordTextbox" Hidden="true" />
+      <Field Name="userIDtextBox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAABCASAAABEAAACAAAAiAIAAAAQAACAAAAAAAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.Purchasesconcs">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="addPurchaseButton" Hidden="true" />
+      <Field Name="comboBox1" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="getallmedicineBindingSource" Hidden="true" />
+      <Field Name="getallmedicineTableAdapter" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="pharmacyDataSet" Hidden="true" />
+      <Field Name="quantityNumericInput" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAIBAQAAKMABCCAAAAAAAAACAAAAAACAA=</HashCode>
+      <FileName>Purchasesconcs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.Program">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SW_project.OrderReceipt">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAgAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>OrderReceipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

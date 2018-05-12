@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SW_project</RootNamespace>
     <AssemblyName>SW project</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -28,6 +28,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -88,11 +89,15 @@
     <Compile Include="Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="orderrec.cs">
+    <Compile Include="OrderReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="orderrec.Designer.cs">
-      <DependentUpon>orderrec.cs</DependentUpon>
+    <Compile Include="OrderReceipt.Designer.cs">
+      <DependentUpon>OrderReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyDataSet.cs">
+      <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="PharmacyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -114,8 +119,8 @@
     <EmbeddedResource Include="Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="orderrec.resx">
-      <DependentUpon>orderrec.cs</DependentUpon>
+    <EmbeddedResource Include="OrderReceipt.resx">
+      <DependentUpon>OrderReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,10 +130,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Purchasesconcs.resx">
       <DependentUpon>Purchasesconcs.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="PharmacyDataSet.xsc">
       <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
     </None>

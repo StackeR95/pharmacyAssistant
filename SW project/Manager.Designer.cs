@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -210,34 +210,35 @@
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(988, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(1049, 109);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 597);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 593);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(990, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1051, 26);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 21);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(151, 21);
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
             // toolStripDropDownButton1
@@ -247,7 +248,7 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.ShowDropDownArrow = false;
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(20, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(24, 24);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // toolStripDropDownButton2
@@ -257,7 +258,7 @@
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.ShowDropDownArrow = false;
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(20, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(24, 24);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
             // 
             // ManagerTabs
@@ -301,7 +302,7 @@
             this.orderTotalPriceValueTextLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.orderTotalPriceValueTextLabel.Location = new System.Drawing.Point(865, 414);
             this.orderTotalPriceValueTextLabel.Name = "orderTotalPriceValueTextLabel";
-            this.orderTotalPriceValueTextLabel.Size = new System.Drawing.Size(17, 17);
+            this.orderTotalPriceValueTextLabel.Size = new System.Drawing.Size(19, 20);
             this.orderTotalPriceValueTextLabel.TabIndex = 3;
             this.orderTotalPriceValueTextLabel.Text = "0";
             this.orderTotalPriceValueTextLabel.Visible = false;
@@ -312,7 +313,7 @@
             this.orderTotalPriceLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.orderTotalPriceLabel.Location = new System.Drawing.Point(761, 414);
             this.orderTotalPriceLabel.Name = "orderTotalPriceLabel";
-            this.orderTotalPriceLabel.Size = new System.Drawing.Size(97, 17);
+            this.orderTotalPriceLabel.Size = new System.Drawing.Size(113, 20);
             this.orderTotalPriceLabel.TabIndex = 2;
             this.orderTotalPriceLabel.Text = "Total Price :";
             // 
@@ -329,15 +330,17 @@
             this.totalPrice});
             this.orderDescriptionGridView.GridColor = System.Drawing.Color.Black;
             this.orderDescriptionGridView.Location = new System.Drawing.Point(331, 6);
+            this.orderDescriptionGridView.MultiSelect = false;
             this.orderDescriptionGridView.Name = "orderDescriptionGridView";
             this.orderDescriptionGridView.ReadOnly = true;
             this.orderDescriptionGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.orderDescriptionGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.orderDescriptionGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.orderDescriptionGridView.RowTemplate.ReadOnly = true;
             this.orderDescriptionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.orderDescriptionGridView.Size = new System.Drawing.Size(606, 429);
+            this.orderDescriptionGridView.Size = new System.Drawing.Size(629, 429);
             this.orderDescriptionGridView.TabIndex = 1;
+            this.orderDescriptionGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.orderDescriptionGridView_UserDeletingRow);
             // 
             // Column1
             // 
@@ -391,7 +394,7 @@
             // 
             this.orderNewOrderButton.Location = new System.Drawing.Point(166, 168);
             this.orderNewOrderButton.Name = "orderNewOrderButton";
-            this.orderNewOrderButton.Size = new System.Drawing.Size(121, 23);
+            this.orderNewOrderButton.Size = new System.Drawing.Size(121, 32);
             this.orderNewOrderButton.TabIndex = 5;
             this.orderNewOrderButton.Text = "Order";
             this.orderNewOrderButton.UseVisualStyleBackColor = true;
@@ -412,7 +415,7 @@
             this.orderQuantityLabel.AutoSize = true;
             this.orderQuantityLabel.Location = new System.Drawing.Point(6, 111);
             this.orderQuantityLabel.Name = "orderQuantityLabel";
-            this.orderQuantityLabel.Size = new System.Drawing.Size(74, 17);
+            this.orderQuantityLabel.Size = new System.Drawing.Size(85, 20);
             this.orderQuantityLabel.TabIndex = 3;
             this.orderQuantityLabel.Text = "Quantity:";
             // 
@@ -421,7 +424,7 @@
             this.orderChooseMedicineLabel.AutoSize = true;
             this.orderChooseMedicineLabel.Location = new System.Drawing.Point(6, 72);
             this.orderChooseMedicineLabel.Name = "orderChooseMedicineLabel";
-            this.orderChooseMedicineLabel.Size = new System.Drawing.Size(136, 17);
+            this.orderChooseMedicineLabel.Size = new System.Drawing.Size(159, 20);
             this.orderChooseMedicineLabel.TabIndex = 2;
             this.orderChooseMedicineLabel.Text = "Choose Medicine:";
             // 
@@ -429,7 +432,7 @@
             // 
             this.orderQuantityTextField.Location = new System.Drawing.Point(166, 108);
             this.orderQuantityTextField.Name = "orderQuantityTextField";
-            this.orderQuantityTextField.Size = new System.Drawing.Size(121, 23);
+            this.orderQuantityTextField.Size = new System.Drawing.Size(121, 26);
             this.orderQuantityTextField.TabIndex = 1;
             // 
             // orderChooseMedicineComboBox
@@ -442,7 +445,7 @@
             this.orderChooseMedicineComboBox.FormattingEnabled = true;
             this.orderChooseMedicineComboBox.Location = new System.Drawing.Point(166, 72);
             this.orderChooseMedicineComboBox.Name = "orderChooseMedicineComboBox";
-            this.orderChooseMedicineComboBox.Size = new System.Drawing.Size(121, 24);
+            this.orderChooseMedicineComboBox.Size = new System.Drawing.Size(121, 28);
             this.orderChooseMedicineComboBox.TabIndex = 0;
             this.orderChooseMedicineComboBox.ValueMember = "Code";
             // 
@@ -534,7 +537,7 @@
             this.addMedicineCategoryComboBox.FormattingEnabled = true;
             this.addMedicineCategoryComboBox.Location = new System.Drawing.Point(150, 109);
             this.addMedicineCategoryComboBox.Name = "addMedicineCategoryComboBox";
-            this.addMedicineCategoryComboBox.Size = new System.Drawing.Size(235, 24);
+            this.addMedicineCategoryComboBox.Size = new System.Drawing.Size(235, 28);
             this.addMedicineCategoryComboBox.TabIndex = 38;
             this.addMedicineCategoryComboBox.ValueMember = "Category";
             // 
@@ -548,7 +551,7 @@
             this.addMedicineNewCategoryCheckBox.AutoSize = true;
             this.addMedicineNewCategoryCheckBox.Location = new System.Drawing.Point(84, 112);
             this.addMedicineNewCategoryCheckBox.Name = "addMedicineNewCategoryCheckBox";
-            this.addMedicineNewCategoryCheckBox.Size = new System.Drawing.Size(62, 21);
+            this.addMedicineNewCategoryCheckBox.Size = new System.Drawing.Size(73, 24);
             this.addMedicineNewCategoryCheckBox.TabIndex = 36;
             this.addMedicineNewCategoryCheckBox.Text = "New ";
             this.addMedicineNewCategoryCheckBox.UseVisualStyleBackColor = true;
@@ -558,7 +561,7 @@
             // 
             this.addMedicineCategoryTextField.Location = new System.Drawing.Point(150, 109);
             this.addMedicineCategoryTextField.Name = "addMedicineCategoryTextField";
-            this.addMedicineCategoryTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicineCategoryTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicineCategoryTextField.TabIndex = 35;
             // 
             // addMedicineBarCodeLabel
@@ -566,7 +569,7 @@
             this.addMedicineBarCodeLabel.AutoSize = true;
             this.addMedicineBarCodeLabel.Location = new System.Drawing.Point(6, 27);
             this.addMedicineBarCodeLabel.Name = "addMedicineBarCodeLabel";
-            this.addMedicineBarCodeLabel.Size = new System.Drawing.Size(73, 17);
+            this.addMedicineBarCodeLabel.Size = new System.Drawing.Size(85, 20);
             this.addMedicineBarCodeLabel.TabIndex = 34;
             this.addMedicineBarCodeLabel.Text = "Barcode:";
             // 
@@ -586,7 +589,7 @@
             this.addMedicineCategoryLabel.AutoSize = true;
             this.addMedicineCategoryLabel.Location = new System.Drawing.Point(6, 111);
             this.addMedicineCategoryLabel.Name = "addMedicineCategoryLabel";
-            this.addMedicineCategoryLabel.Size = new System.Drawing.Size(78, 17);
+            this.addMedicineCategoryLabel.Size = new System.Drawing.Size(90, 20);
             this.addMedicineCategoryLabel.TabIndex = 28;
             this.addMedicineCategoryLabel.Text = "Category:";
             // 
@@ -595,7 +598,7 @@
             this.addMedicinePriceOfSaleLabel.AutoSize = true;
             this.addMedicinePriceOfSaleLabel.Location = new System.Drawing.Point(6, 167);
             this.addMedicinePriceOfSaleLabel.Name = "addMedicinePriceOfSaleLabel";
-            this.addMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(106, 17);
+            this.addMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(124, 20);
             this.addMedicinePriceOfSaleLabel.TabIndex = 32;
             this.addMedicinePriceOfSaleLabel.Text = "Price of Sale:";
             // 
@@ -603,7 +606,7 @@
             // 
             this.addMedicineConcectrationTextField.Location = new System.Drawing.Point(150, 136);
             this.addMedicineConcectrationTextField.Name = "addMedicineConcectrationTextField";
-            this.addMedicineConcectrationTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicineConcectrationTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicineConcectrationTextField.TabIndex = 4;
             // 
             // addMedicineConcentrationLabel
@@ -611,7 +614,7 @@
             this.addMedicineConcentrationLabel.AutoSize = true;
             this.addMedicineConcentrationLabel.Location = new System.Drawing.Point(6, 139);
             this.addMedicineConcentrationLabel.Name = "addMedicineConcentrationLabel";
-            this.addMedicineConcentrationLabel.Size = new System.Drawing.Size(114, 17);
+            this.addMedicineConcentrationLabel.Size = new System.Drawing.Size(132, 20);
             this.addMedicineConcentrationLabel.TabIndex = 29;
             this.addMedicineConcentrationLabel.Text = "Concentration:";
             // 
@@ -619,21 +622,21 @@
             // 
             this.addMedicinePriceOfSaleTextField.Location = new System.Drawing.Point(150, 164);
             this.addMedicinePriceOfSaleTextField.Name = "addMedicinePriceOfSaleTextField";
-            this.addMedicinePriceOfSaleTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicinePriceOfSaleTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicinePriceOfSaleTextField.TabIndex = 5;
             // 
             // addMedicineBarcodeTextField
             // 
             this.addMedicineBarcodeTextField.Location = new System.Drawing.Point(150, 24);
             this.addMedicineBarcodeTextField.Name = "addMedicineBarcodeTextField";
-            this.addMedicineBarcodeTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicineBarcodeTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicineBarcodeTextField.TabIndex = 0;
             // 
             // addMedicineActiveIngrdTextField
             // 
             this.addMedicineActiveIngrdTextField.Location = new System.Drawing.Point(150, 80);
             this.addMedicineActiveIngrdTextField.Name = "addMedicineActiveIngrdTextField";
-            this.addMedicineActiveIngrdTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicineActiveIngrdTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicineActiveIngrdTextField.TabIndex = 2;
             // 
             // addMedicineTradeNameLabel
@@ -641,7 +644,7 @@
             this.addMedicineTradeNameLabel.AutoSize = true;
             this.addMedicineTradeNameLabel.Location = new System.Drawing.Point(6, 55);
             this.addMedicineTradeNameLabel.Name = "addMedicineTradeNameLabel";
-            this.addMedicineTradeNameLabel.Size = new System.Drawing.Size(95, 17);
+            this.addMedicineTradeNameLabel.Size = new System.Drawing.Size(108, 20);
             this.addMedicineTradeNameLabel.TabIndex = 33;
             this.addMedicineTradeNameLabel.Text = "Tradename:";
             // 
@@ -650,7 +653,7 @@
             this.addMedicineActiveIngredientLabel.AutoSize = true;
             this.addMedicineActiveIngredientLabel.Location = new System.Drawing.Point(6, 83);
             this.addMedicineActiveIngredientLabel.Name = "addMedicineActiveIngredientLabel";
-            this.addMedicineActiveIngredientLabel.Size = new System.Drawing.Size(135, 17);
+            this.addMedicineActiveIngredientLabel.Size = new System.Drawing.Size(156, 20);
             this.addMedicineActiveIngredientLabel.TabIndex = 31;
             this.addMedicineActiveIngredientLabel.Text = "Active ingredient:";
             // 
@@ -658,7 +661,7 @@
             // 
             this.addMedicineTradeNameTextField.Location = new System.Drawing.Point(150, 52);
             this.addMedicineTradeNameTextField.Name = "addMedicineTradeNameTextField";
-            this.addMedicineTradeNameTextField.Size = new System.Drawing.Size(235, 23);
+            this.addMedicineTradeNameTextField.Size = new System.Drawing.Size(235, 26);
             this.addMedicineTradeNameTextField.TabIndex = 1;
             // 
             // addCustomerTabPage
@@ -708,7 +711,7 @@
             this.addCustomerCommentsLabel.AutoSize = true;
             this.addCustomerCommentsLabel.Location = new System.Drawing.Point(6, 113);
             this.addCustomerCommentsLabel.Name = "addCustomerCommentsLabel";
-            this.addCustomerCommentsLabel.Size = new System.Drawing.Size(87, 17);
+            this.addCustomerCommentsLabel.Size = new System.Drawing.Size(104, 20);
             this.addCustomerCommentsLabel.TabIndex = 12;
             this.addCustomerCommentsLabel.Text = "Comments:";
             // 
@@ -717,21 +720,21 @@
             this.addCustomerTelephoneTextField.Location = new System.Drawing.Point(131, 82);
             this.addCustomerTelephoneTextField.MaxLength = 11;
             this.addCustomerTelephoneTextField.Name = "addCustomerTelephoneTextField";
-            this.addCustomerTelephoneTextField.Size = new System.Drawing.Size(171, 23);
+            this.addCustomerTelephoneTextField.Size = new System.Drawing.Size(171, 26);
             this.addCustomerTelephoneTextField.TabIndex = 3;
             // 
             // addCustomerAddressTextField
             // 
             this.addCustomerAddressTextField.Location = new System.Drawing.Point(131, 56);
             this.addCustomerAddressTextField.Name = "addCustomerAddressTextField";
-            this.addCustomerAddressTextField.Size = new System.Drawing.Size(171, 23);
+            this.addCustomerAddressTextField.Size = new System.Drawing.Size(171, 26);
             this.addCustomerAddressTextField.TabIndex = 2;
             // 
             // addCustomerNameTextField
             // 
             this.addCustomerNameTextField.Location = new System.Drawing.Point(131, 30);
             this.addCustomerNameTextField.Name = "addCustomerNameTextField";
-            this.addCustomerNameTextField.Size = new System.Drawing.Size(171, 23);
+            this.addCustomerNameTextField.Size = new System.Drawing.Size(171, 26);
             this.addCustomerNameTextField.TabIndex = 1;
             // 
             // addCustomerTelephoneNumbLabel
@@ -739,7 +742,7 @@
             this.addCustomerTelephoneNumbLabel.AutoSize = true;
             this.addCustomerTelephoneNumbLabel.Location = new System.Drawing.Point(6, 85);
             this.addCustomerTelephoneNumbLabel.Name = "addCustomerTelephoneNumbLabel";
-            this.addCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(118, 17);
+            this.addCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(132, 20);
             this.addCustomerTelephoneNumbLabel.TabIndex = 10;
             this.addCustomerTelephoneNumbLabel.Text = "Telephone no.:";
             // 
@@ -748,7 +751,7 @@
             this.addCustomerAddressLabel.AutoSize = true;
             this.addCustomerAddressLabel.Location = new System.Drawing.Point(6, 59);
             this.addCustomerAddressLabel.Name = "addCustomerAddressLabel";
-            this.addCustomerAddressLabel.Size = new System.Drawing.Size(72, 17);
+            this.addCustomerAddressLabel.Size = new System.Drawing.Size(84, 20);
             this.addCustomerAddressLabel.TabIndex = 8;
             this.addCustomerAddressLabel.Text = "Address:";
             // 
@@ -757,7 +760,7 @@
             this.addCustomerNameLabel.AutoSize = true;
             this.addCustomerNameLabel.Location = new System.Drawing.Point(6, 33);
             this.addCustomerNameLabel.Name = "addCustomerNameLabel";
-            this.addCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.addCustomerNameLabel.Size = new System.Drawing.Size(63, 20);
             this.addCustomerNameLabel.TabIndex = 6;
             this.addCustomerNameLabel.Text = "Name:";
             // 
@@ -813,7 +816,7 @@
             this.addPurchaseDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.addPurchaseDateTimePicker.Location = new System.Drawing.Point(85, 21);
             this.addPurchaseDateTimePicker.Name = "addPurchaseDateTimePicker";
-            this.addPurchaseDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.addPurchaseDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.addPurchaseDateTimePicker.TabIndex = 1;
             // 
             // addPurchaseDateLabel
@@ -821,7 +824,7 @@
             this.addPurchaseDateLabel.AutoSize = true;
             this.addPurchaseDateLabel.Location = new System.Drawing.Point(6, 26);
             this.addPurchaseDateLabel.Name = "addPurchaseDateLabel";
-            this.addPurchaseDateLabel.Size = new System.Drawing.Size(47, 17);
+            this.addPurchaseDateLabel.Size = new System.Drawing.Size(55, 20);
             this.addPurchaseDateLabel.TabIndex = 15;
             this.addPurchaseDateLabel.Text = "Date:";
             // 
@@ -910,7 +913,7 @@
             this.editMedicineBarcodeComboBox.FormattingEnabled = true;
             this.editMedicineBarcodeComboBox.Location = new System.Drawing.Point(141, 24);
             this.editMedicineBarcodeComboBox.Name = "editMedicineBarcodeComboBox";
-            this.editMedicineBarcodeComboBox.Size = new System.Drawing.Size(235, 24);
+            this.editMedicineBarcodeComboBox.Size = new System.Drawing.Size(235, 28);
             this.editMedicineBarcodeComboBox.TabIndex = 1;
             this.editMedicineBarcodeComboBox.ValueMember = "Code";
             // 
@@ -929,7 +932,7 @@
             this.editMedicineCategoryComboBox.FormattingEnabled = true;
             this.editMedicineCategoryComboBox.Location = new System.Drawing.Point(141, 108);
             this.editMedicineCategoryComboBox.Name = "editMedicineCategoryComboBox";
-            this.editMedicineCategoryComboBox.Size = new System.Drawing.Size(235, 24);
+            this.editMedicineCategoryComboBox.Size = new System.Drawing.Size(235, 28);
             this.editMedicineCategoryComboBox.TabIndex = 4;
             this.editMedicineCategoryComboBox.ValueMember = "Category";
             // 
@@ -938,7 +941,7 @@
             this.editMedicineBarCodeLabel.AutoSize = true;
             this.editMedicineBarCodeLabel.Location = new System.Drawing.Point(6, 27);
             this.editMedicineBarCodeLabel.Name = "editMedicineBarCodeLabel";
-            this.editMedicineBarCodeLabel.Size = new System.Drawing.Size(73, 17);
+            this.editMedicineBarCodeLabel.Size = new System.Drawing.Size(85, 20);
             this.editMedicineBarCodeLabel.TabIndex = 34;
             this.editMedicineBarCodeLabel.Text = "Barcode:";
             // 
@@ -958,7 +961,7 @@
             this.editMedicineCategoryLabel.AutoSize = true;
             this.editMedicineCategoryLabel.Location = new System.Drawing.Point(6, 111);
             this.editMedicineCategoryLabel.Name = "editMedicineCategoryLabel";
-            this.editMedicineCategoryLabel.Size = new System.Drawing.Size(78, 17);
+            this.editMedicineCategoryLabel.Size = new System.Drawing.Size(90, 20);
             this.editMedicineCategoryLabel.TabIndex = 28;
             this.editMedicineCategoryLabel.Text = "Category:";
             // 
@@ -967,7 +970,7 @@
             this.editMedicinePriceOfSaleLabel.AutoSize = true;
             this.editMedicinePriceOfSaleLabel.Location = new System.Drawing.Point(6, 167);
             this.editMedicinePriceOfSaleLabel.Name = "editMedicinePriceOfSaleLabel";
-            this.editMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(106, 17);
+            this.editMedicinePriceOfSaleLabel.Size = new System.Drawing.Size(124, 20);
             this.editMedicinePriceOfSaleLabel.TabIndex = 32;
             this.editMedicinePriceOfSaleLabel.Text = "Price of Sale:";
             // 
@@ -975,7 +978,7 @@
             // 
             this.editMedicineConcentrationTextField.Location = new System.Drawing.Point(141, 136);
             this.editMedicineConcentrationTextField.Name = "editMedicineConcentrationTextField";
-            this.editMedicineConcentrationTextField.Size = new System.Drawing.Size(235, 23);
+            this.editMedicineConcentrationTextField.Size = new System.Drawing.Size(235, 26);
             this.editMedicineConcentrationTextField.TabIndex = 5;
             // 
             // editMedicineConcentrationLabel
@@ -983,7 +986,7 @@
             this.editMedicineConcentrationLabel.AutoSize = true;
             this.editMedicineConcentrationLabel.Location = new System.Drawing.Point(6, 139);
             this.editMedicineConcentrationLabel.Name = "editMedicineConcentrationLabel";
-            this.editMedicineConcentrationLabel.Size = new System.Drawing.Size(114, 17);
+            this.editMedicineConcentrationLabel.Size = new System.Drawing.Size(132, 20);
             this.editMedicineConcentrationLabel.TabIndex = 29;
             this.editMedicineConcentrationLabel.Text = "Concentration:";
             // 
@@ -991,14 +994,14 @@
             // 
             this.editMedicinePriceOfSaleTextField.Location = new System.Drawing.Point(141, 164);
             this.editMedicinePriceOfSaleTextField.Name = "editMedicinePriceOfSaleTextField";
-            this.editMedicinePriceOfSaleTextField.Size = new System.Drawing.Size(235, 23);
+            this.editMedicinePriceOfSaleTextField.Size = new System.Drawing.Size(235, 26);
             this.editMedicinePriceOfSaleTextField.TabIndex = 6;
             // 
             // editMedicineActiveIngredientTextField
             // 
             this.editMedicineActiveIngredientTextField.Location = new System.Drawing.Point(141, 80);
             this.editMedicineActiveIngredientTextField.Name = "editMedicineActiveIngredientTextField";
-            this.editMedicineActiveIngredientTextField.Size = new System.Drawing.Size(235, 23);
+            this.editMedicineActiveIngredientTextField.Size = new System.Drawing.Size(235, 26);
             this.editMedicineActiveIngredientTextField.TabIndex = 3;
             // 
             // editMedicineTradenameLabel
@@ -1006,7 +1009,7 @@
             this.editMedicineTradenameLabel.AutoSize = true;
             this.editMedicineTradenameLabel.Location = new System.Drawing.Point(6, 55);
             this.editMedicineTradenameLabel.Name = "editMedicineTradenameLabel";
-            this.editMedicineTradenameLabel.Size = new System.Drawing.Size(95, 17);
+            this.editMedicineTradenameLabel.Size = new System.Drawing.Size(108, 20);
             this.editMedicineTradenameLabel.TabIndex = 33;
             this.editMedicineTradenameLabel.Text = "Tradename:";
             // 
@@ -1015,7 +1018,7 @@
             this.editMedicineActiveIngredientLabel.AutoSize = true;
             this.editMedicineActiveIngredientLabel.Location = new System.Drawing.Point(6, 83);
             this.editMedicineActiveIngredientLabel.Name = "editMedicineActiveIngredientLabel";
-            this.editMedicineActiveIngredientLabel.Size = new System.Drawing.Size(135, 17);
+            this.editMedicineActiveIngredientLabel.Size = new System.Drawing.Size(156, 20);
             this.editMedicineActiveIngredientLabel.TabIndex = 31;
             this.editMedicineActiveIngredientLabel.Text = "Active ingredient:";
             // 
@@ -1023,7 +1026,7 @@
             // 
             this.editMedicineTradeNameTextField.Location = new System.Drawing.Point(141, 52);
             this.editMedicineTradeNameTextField.Name = "editMedicineTradeNameTextField";
-            this.editMedicineTradeNameTextField.Size = new System.Drawing.Size(235, 23);
+            this.editMedicineTradeNameTextField.Size = new System.Drawing.Size(235, 26);
             this.editMedicineTradeNameTextField.TabIndex = 2;
             // 
             // tabPage9
@@ -1067,7 +1070,7 @@
             this.editCustomerNameComboBox.FormattingEnabled = true;
             this.editCustomerNameComboBox.Location = new System.Drawing.Point(131, 22);
             this.editCustomerNameComboBox.Name = "editCustomerNameComboBox";
-            this.editCustomerNameComboBox.Size = new System.Drawing.Size(171, 24);
+            this.editCustomerNameComboBox.Size = new System.Drawing.Size(171, 28);
             this.editCustomerNameComboBox.TabIndex = 1;
             this.editCustomerNameComboBox.ValueMember = "cname";
             // 
@@ -1092,7 +1095,7 @@
             this.editCustomerCommentsLabel.AutoSize = true;
             this.editCustomerCommentsLabel.Location = new System.Drawing.Point(6, 113);
             this.editCustomerCommentsLabel.Name = "editCustomerCommentsLabel";
-            this.editCustomerCommentsLabel.Size = new System.Drawing.Size(87, 17);
+            this.editCustomerCommentsLabel.Size = new System.Drawing.Size(104, 20);
             this.editCustomerCommentsLabel.TabIndex = 12;
             this.editCustomerCommentsLabel.Text = "Comments:";
             // 
@@ -1101,14 +1104,14 @@
             this.editCustomerTelephoneTextField.Location = new System.Drawing.Point(131, 82);
             this.editCustomerTelephoneTextField.MaxLength = 11;
             this.editCustomerTelephoneTextField.Name = "editCustomerTelephoneTextField";
-            this.editCustomerTelephoneTextField.Size = new System.Drawing.Size(171, 23);
+            this.editCustomerTelephoneTextField.Size = new System.Drawing.Size(171, 26);
             this.editCustomerTelephoneTextField.TabIndex = 3;
             // 
             // editCustomerAddressTextField
             // 
             this.editCustomerAddressTextField.Location = new System.Drawing.Point(131, 52);
             this.editCustomerAddressTextField.Name = "editCustomerAddressTextField";
-            this.editCustomerAddressTextField.Size = new System.Drawing.Size(171, 23);
+            this.editCustomerAddressTextField.Size = new System.Drawing.Size(171, 26);
             this.editCustomerAddressTextField.TabIndex = 2;
             // 
             // editCustomerTelephoneNumbLabel
@@ -1116,7 +1119,7 @@
             this.editCustomerTelephoneNumbLabel.AutoSize = true;
             this.editCustomerTelephoneNumbLabel.Location = new System.Drawing.Point(6, 85);
             this.editCustomerTelephoneNumbLabel.Name = "editCustomerTelephoneNumbLabel";
-            this.editCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(118, 17);
+            this.editCustomerTelephoneNumbLabel.Size = new System.Drawing.Size(132, 20);
             this.editCustomerTelephoneNumbLabel.TabIndex = 10;
             this.editCustomerTelephoneNumbLabel.Text = "Telephone no.:";
             // 
@@ -1125,7 +1128,7 @@
             this.editCustomerAddressLabel.AutoSize = true;
             this.editCustomerAddressLabel.Location = new System.Drawing.Point(6, 55);
             this.editCustomerAddressLabel.Name = "editCustomerAddressLabel";
-            this.editCustomerAddressLabel.Size = new System.Drawing.Size(72, 17);
+            this.editCustomerAddressLabel.Size = new System.Drawing.Size(84, 20);
             this.editCustomerAddressLabel.TabIndex = 8;
             this.editCustomerAddressLabel.Text = "Address:";
             // 
@@ -1134,7 +1137,7 @@
             this.editCustomerNameLabel.AutoSize = true;
             this.editCustomerNameLabel.Location = new System.Drawing.Point(6, 25);
             this.editCustomerNameLabel.Name = "editCustomerNameLabel";
-            this.editCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.editCustomerNameLabel.Size = new System.Drawing.Size(63, 20);
             this.editCustomerNameLabel.TabIndex = 6;
             this.editCustomerNameLabel.Text = "Name:";
             // 
@@ -1190,7 +1193,7 @@
             this.deleteCustomerNameLabel.AutoSize = true;
             this.deleteCustomerNameLabel.Location = new System.Drawing.Point(12, 27);
             this.deleteCustomerNameLabel.Name = "deleteCustomerNameLabel";
-            this.deleteCustomerNameLabel.Size = new System.Drawing.Size(54, 17);
+            this.deleteCustomerNameLabel.Size = new System.Drawing.Size(63, 20);
             this.deleteCustomerNameLabel.TabIndex = 19;
             this.deleteCustomerNameLabel.Text = "Name:";
             // 
@@ -1204,10 +1207,10 @@
             this.deleteCustomerNameComboBox.FormattingEnabled = true;
             this.deleteCustomerNameComboBox.Location = new System.Drawing.Point(133, 19);
             this.deleteCustomerNameComboBox.Name = "deleteCustomerNameComboBox";
-            this.deleteCustomerNameComboBox.Size = new System.Drawing.Size(187, 24);
+            this.deleteCustomerNameComboBox.Size = new System.Drawing.Size(187, 28);
             this.deleteCustomerNameComboBox.TabIndex = 1;
             this.deleteCustomerNameComboBox.ValueMember = "cust_code";
-            this.deleteCustomerNameComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
+      //      this.deleteCustomerNameComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteCustomerNameComboBox_SelectedIndexChanged);
             // 
             // deleteOrderGroupBox
             // 
@@ -1239,7 +1242,7 @@
             this.deleteOrderTransNumbLabel.AutoSize = true;
             this.deleteOrderTransNumbLabel.Location = new System.Drawing.Point(12, 27);
             this.deleteOrderTransNumbLabel.Name = "deleteOrderTransNumbLabel";
-            this.deleteOrderTransNumbLabel.Size = new System.Drawing.Size(83, 17);
+            this.deleteOrderTransNumbLabel.Size = new System.Drawing.Size(93, 20);
             this.deleteOrderTransNumbLabel.TabIndex = 19;
             this.deleteOrderTransNumbLabel.Text = "Trans. no.";
             // 
@@ -1253,7 +1256,7 @@
             this.deleteOrderTransNumberComboBox.FormattingEnabled = true;
             this.deleteOrderTransNumberComboBox.Location = new System.Drawing.Point(133, 19);
             this.deleteOrderTransNumberComboBox.Name = "deleteOrderTransNumberComboBox";
-            this.deleteOrderTransNumberComboBox.Size = new System.Drawing.Size(187, 24);
+            this.deleteOrderTransNumberComboBox.Size = new System.Drawing.Size(187, 28);
             this.deleteOrderTransNumberComboBox.TabIndex = 1;
             this.deleteOrderTransNumberComboBox.ValueMember = "transaction_no";
             // 
@@ -1316,7 +1319,7 @@
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Location = new System.Drawing.Point(329, 29);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(73, 17);
+            this.categoryLabel.Size = new System.Drawing.Size(84, 20);
             this.categoryLabel.TabIndex = 30;
             this.categoryLabel.Text = "Category";
             // 
@@ -1336,7 +1339,7 @@
             "Alergie"});
             this.searchCategoryComboBox.Location = new System.Drawing.Point(408, 25);
             this.searchCategoryComboBox.Name = "searchCategoryComboBox";
-            this.searchCategoryComboBox.Size = new System.Drawing.Size(168, 24);
+            this.searchCategoryComboBox.Size = new System.Drawing.Size(168, 28);
             this.searchCategoryComboBox.TabIndex = 29;
             // 
             // searchFromLabel
@@ -1346,7 +1349,7 @@
             this.searchFromLabel.AutoSize = true;
             this.searchFromLabel.Location = new System.Drawing.Point(340, 28);
             this.searchFromLabel.Name = "searchFromLabel";
-            this.searchFromLabel.Size = new System.Drawing.Size(49, 17);
+            this.searchFromLabel.Size = new System.Drawing.Size(58, 20);
             this.searchFromLabel.TabIndex = 24;
             this.searchFromLabel.Text = "From:";
             // 
@@ -1357,7 +1360,7 @@
             this.searchToLabel.AutoSize = true;
             this.searchToLabel.Location = new System.Drawing.Point(650, 28);
             this.searchToLabel.Name = "searchToLabel";
-            this.searchToLabel.Size = new System.Drawing.Size(32, 17);
+            this.searchToLabel.Size = new System.Drawing.Size(36, 20);
             this.searchToLabel.TabIndex = 26;
             this.searchToLabel.Text = "To:";
             // 
@@ -1370,7 +1373,7 @@
             this.searchToDateTimePicker.Location = new System.Drawing.Point(694, 25);
             this.searchToDateTimePicker.Name = "searchToDateTimePicker";
             this.searchToDateTimePicker.ShowUpDown = true;
-            this.searchToDateTimePicker.Size = new System.Drawing.Size(116, 23);
+            this.searchToDateTimePicker.Size = new System.Drawing.Size(116, 26);
             this.searchToDateTimePicker.TabIndex = 25;
             // 
             // searchViewButton
@@ -1389,7 +1392,7 @@
             this.searchChooseLabel.AutoSize = true;
             this.searchChooseLabel.Location = new System.Drawing.Point(1, 29);
             this.searchChooseLabel.Name = "searchChooseLabel";
-            this.searchChooseLabel.Size = new System.Drawing.Size(67, 17);
+            this.searchChooseLabel.Size = new System.Drawing.Size(78, 20);
             this.searchChooseLabel.TabIndex = 19;
             this.searchChooseLabel.Text = "Choose:";
             // 
@@ -1402,7 +1405,7 @@
             this.searchFromDateTimePicker.Location = new System.Drawing.Point(438, 26);
             this.searchFromDateTimePicker.Name = "searchFromDateTimePicker";
             this.searchFromDateTimePicker.ShowUpDown = true;
-            this.searchFromDateTimePicker.Size = new System.Drawing.Size(109, 23);
+            this.searchFromDateTimePicker.Size = new System.Drawing.Size(109, 26);
             this.searchFromDateTimePicker.TabIndex = 23;
             // 
             // searchMethodsComboBox
@@ -1422,7 +1425,7 @@
             "Selected customer by tel."});
             this.searchMethodsComboBox.Location = new System.Drawing.Point(72, 26);
             this.searchMethodsComboBox.Name = "searchMethodsComboBox";
-            this.searchMethodsComboBox.Size = new System.Drawing.Size(251, 24);
+            this.searchMethodsComboBox.Size = new System.Drawing.Size(251, 28);
             this.searchMethodsComboBox.TabIndex = 18;
             // 
             // searchActiveIngredientTradeNameLabel
@@ -1432,7 +1435,7 @@
             this.searchActiveIngredientTradeNameLabel.AutoSize = true;
             this.searchActiveIngredientTradeNameLabel.Location = new System.Drawing.Point(582, 29);
             this.searchActiveIngredientTradeNameLabel.Name = "searchActiveIngredientTradeNameLabel";
-            this.searchActiveIngredientTradeNameLabel.Size = new System.Drawing.Size(100, 17);
+            this.searchActiveIngredientTradeNameLabel.Size = new System.Drawing.Size(114, 20);
             this.searchActiveIngredientTradeNameLabel.TabIndex = 21;
             this.searchActiveIngredientTradeNameLabel.Text = "Tradename :";
             // 
@@ -1442,7 +1445,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchMultipleOptionTextField.Location = new System.Drawing.Point(694, 25);
             this.searchMultipleOptionTextField.Name = "searchMultipleOptionTextField";
-            this.searchMultipleOptionTextField.Size = new System.Drawing.Size(138, 23);
+            this.searchMultipleOptionTextField.Size = new System.Drawing.Size(138, 26);
             this.searchMultipleOptionTextField.TabIndex = 27;
             // 
             // accountPageTab
@@ -1492,7 +1495,7 @@
             this.accountRenterNewPassLabel.AutoSize = true;
             this.accountRenterNewPassLabel.Location = new System.Drawing.Point(6, 92);
             this.accountRenterNewPassLabel.Name = "accountRenterNewPassLabel";
-            this.accountRenterNewPassLabel.Size = new System.Drawing.Size(183, 17);
+            this.accountRenterNewPassLabel.Size = new System.Drawing.Size(213, 20);
             this.accountRenterNewPassLabel.TabIndex = 5;
             this.accountRenterNewPassLabel.Text = "Re-enter new password:";
             // 
@@ -1501,7 +1504,7 @@
             this.accountNewPassLabel.AutoSize = true;
             this.accountNewPassLabel.Location = new System.Drawing.Point(6, 56);
             this.accountNewPassLabel.Name = "accountNewPassLabel";
-            this.accountNewPassLabel.Size = new System.Drawing.Size(158, 17);
+            this.accountNewPassLabel.Size = new System.Drawing.Size(185, 20);
             this.accountNewPassLabel.TabIndex = 4;
             this.accountNewPassLabel.Text = "Enter new password:";
             // 
@@ -1510,7 +1513,7 @@
             this.accountOldPassLabel.AutoSize = true;
             this.accountOldPassLabel.Location = new System.Drawing.Point(6, 28);
             this.accountOldPassLabel.Name = "accountOldPassLabel";
-            this.accountOldPassLabel.Size = new System.Drawing.Size(111, 17);
+            this.accountOldPassLabel.Size = new System.Drawing.Size(130, 20);
             this.accountOldPassLabel.TabIndex = 3;
             this.accountOldPassLabel.Text = "Old password:";
             // 
@@ -1518,7 +1521,7 @@
             // 
             this.accountNewPasswordTextField.Location = new System.Drawing.Point(210, 50);
             this.accountNewPasswordTextField.Name = "accountNewPasswordTextField";
-            this.accountNewPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountNewPasswordTextField.Size = new System.Drawing.Size(119, 26);
             this.accountNewPasswordTextField.TabIndex = 2;
             this.accountNewPasswordTextField.UseSystemPasswordChar = true;
             // 
@@ -1526,7 +1529,7 @@
             // 
             this.accountOldPasswordTextField.Location = new System.Drawing.Point(210, 19);
             this.accountOldPasswordTextField.Name = "accountOldPasswordTextField";
-            this.accountOldPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountOldPasswordTextField.Size = new System.Drawing.Size(119, 26);
             this.accountOldPasswordTextField.TabIndex = 1;
             this.accountOldPasswordTextField.UseSystemPasswordChar = true;
             // 
@@ -1534,7 +1537,7 @@
             // 
             this.accountRenterNewPasswordTextField.Location = new System.Drawing.Point(210, 89);
             this.accountRenterNewPasswordTextField.Name = "accountRenterNewPasswordTextField";
-            this.accountRenterNewPasswordTextField.Size = new System.Drawing.Size(119, 23);
+            this.accountRenterNewPasswordTextField.Size = new System.Drawing.Size(119, 26);
             this.accountRenterNewPasswordTextField.TabIndex = 3;
             this.accountRenterNewPasswordTextField.UseSystemPasswordChar = true;
             // 
@@ -1543,7 +1546,7 @@
             this.comboBox25.FormattingEnabled = true;
             this.comboBox25.Location = new System.Drawing.Point(133, 19);
             this.comboBox25.Name = "comboBox25";
-            this.comboBox25.Size = new System.Drawing.Size(121, 21);
+            this.comboBox25.Size = new System.Drawing.Size(121, 25);
             this.comboBox25.TabIndex = 18;
             // 
             // label90
@@ -1586,9 +1589,9 @@
             // 
             // Manager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 619);
+            this.ClientSize = new System.Drawing.Size(1051, 619);
             this.Controls.Add(this.ManagerTabs);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);

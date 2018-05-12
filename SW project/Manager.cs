@@ -14,7 +14,7 @@ namespace SW_project
     {
         Controller controller;
         string username1;
-        public Manager(string username,Controller cont)
+        public Manager(string username,Controller cont) 
         {
             controller = cont;
             username1 = username;
@@ -33,12 +33,13 @@ namespace SW_project
             toolStripStatusLabel2.Text = "            Stock Level: ";
             refreshComboBoxes();
         }
-        private void refreshComboBoxes()
+        private void refreshComboBoxes() // This function refreshes all the comboboxes in the application to be synchronized with any transaction happens
         {
             //Refreshing Transaction Number Combo Box
             this.getordersTableAdapter.Fill(this.pharmacyDataSet.getorders);
             deleteOrderTransNumberComboBox.DataSource = this.getordersBindingSource;
             deleteOrderTransNumberComboBox.Refresh();
+
             //Refreshing deleteCustomerNameComboBox
             this.getcustomersTableAdapter.Fill(this.pharmacyDataSet.getcustomers);
             deleteCustomerNameComboBox.DataSource = this.getcustomersBindingSource;
@@ -58,9 +59,9 @@ namespace SW_project
             //Refreshing SearchMethods
             searchMethodsComboBox.SelectedIndexChanged += new System.EventHandler(searchMethodsComboBox_SelectedIndexChanged);
         }
-        private void editMedicineBarcodeComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void editMedicineBarcodeComboBox_SelectedIndexChanged(object sender, System.EventArgs e) // Retreieve all medicine data by barcode to edit it
         {
-            DataTable dt0 = controller.get_all_medicine();
+            DataTable dt0 = controller.get_all_medicine(); // Get all medicine info for the datatable
             if (dt0 != null && editMedicineBarcodeComboBox.Text!="")
             {
                 DataRow dr = dt0.AsEnumerable().SingleOrDefault(r => r.Field<int>("Code") == Int32.Parse(editMedicineBarcodeComboBox.Text));
@@ -73,7 +74,7 @@ namespace SW_project
             }
 
         }
-        private void editCustomerNameComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void editCustomerNameComboBox_SelectedIndexChanged(object sender, System.EventArgs e) // Retreieve all customer data by customer name to edit it
         {
             DataTable dt0 = controller.getCustomerByCode(editCustomerNameComboBox.SelectedIndex+1);
             if(dt0!=null)
@@ -87,8 +88,7 @@ namespace SW_project
 
         }
 
-
-        private void accountChangePasswordButton_Click(object sender, EventArgs e)
+        private void accountChangePasswordButton_Click(object sender, EventArgs e) //Change password function
         {
             if (accountRenterNewPasswordTextField.Text.Trim() != string.Empty && accountOldPasswordTextField.Text.Trim() != string.Empty && accountNewPasswordTextField.Text.Trim() != string.Empty) {
                 if (accountRenterNewPasswordTextField.Text == accountNewPasswordTextField.Text)
@@ -122,11 +122,11 @@ namespace SW_project
             }
         }
 
-        private void addNewMedicine_Click(object sender, EventArgs e)
+        private void addNewMedicine_Click(object sender, EventArgs e) // Add new Medicine Button Handler
         {
             int i;
             String medicineCategory = "";
-            if(addMedicineNewCategoryCheckBox.Checked)
+            if(addMedicineNewCategoryCheckBox.Checked) // this function check if it's new category or old category
             {
                 medicineCategory = addMedicineCategoryTextField.Text;
             }
@@ -134,7 +134,7 @@ namespace SW_project
             {
                 medicineCategory = addMedicineCategoryComboBox.SelectedValue.ToString();
             }
-            if (int.TryParse(addMedicineBarcodeTextField.Text, out i) && medicineCategory != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineActiveIngrdTextField.Text.Trim() != string.Empty && addMedicineTradeNameTextField.Text.Trim() != string.Empty && addMedicineBarcodeTextField.Text.Trim() != string.Empty && addMedicinePriceOfSaleTextField.Text.Trim() != string.Empty)
+            if (int.TryParse(addMedicineBarcodeTextField.Text, out i) && medicineCategory != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineConcectrationTextField.Text.Trim() != string.Empty && addMedicineActiveIngrdTextField.Text.Trim() != string.Empty && addMedicineTradeNameTextField.Text.Trim() != string.Empty && addMedicineBarcodeTextField.Text.Trim() != string.Empty && addMedicinePriceOfSaleTextField.Text.Trim() != string.Empty) //Input Validation
             {
                 int result = controller.InsertMedicine(Int32.Parse(addMedicineBarcodeTextField.Text), addMedicineTradeNameTextField.Text, addMedicineActiveIngrdTextField.Text, addMedicineConcectrationTextField.Text, medicineCategory, float.Parse(addMedicinePriceOfSaleTextField.Text));
                 if (result == 0)
@@ -144,7 +144,7 @@ namespace SW_project
                 else
                 {
                     MessageBox.Show("Product Added Successfully");
-                    addMedicineActiveIngrdTextField.Clear();
+                    addMedicineActiveIngrdTextField.Clear(); // Clear New Medicine data from user view
                     addMedicineBarcodeTextField.Clear();
                     addMedicineCategoryTextField.Clear();
                     addMedicinePriceOfSaleTextField.Clear();
@@ -160,9 +160,10 @@ namespace SW_project
 
         }
 
-        private void addCustomerButton_Click(object sender, EventArgs e)
+        private void addCustomerButton_Click(object sender, EventArgs e) // Add New Customer Button Handler
         {
-            if (addCustomerNameTextField.Text.Trim() != string.Empty && addCustomerAddressTextField.Text.Trim() != string.Empty && addCustomerTelephoneTextField.Text.Trim() != string.Empty) {
+            if (addCustomerNameTextField.Text.Trim() != string.Empty && addCustomerAddressTextField.Text.Trim() != string.Empty && addCustomerTelephoneTextField.Text.Trim() != string.Empty) // Input Validation
+            {
                 int result = controller.InsertCustomer(addCustomerNameTextField.Text, addCustomerAddressTextField.Text, addCustomerCommentsTextField.Text, addCustomerTelephoneTextField.Text);
                 if (result == 0)
                 {
@@ -171,12 +172,12 @@ namespace SW_project
                 else
                 {
                     MessageBox.Show("Customer Added Successfully");
-                    addCustomerNameTextField.Clear();
+                    addCustomerNameTextField.Clear(); // Clear Customer data from view
                     addCustomerAddressTextField.Clear();
                     addCustomerCommentsTextField.Clear();
                     addCustomerTelephoneTextField.Clear();
                 }
-                refreshComboBoxes();
+                refreshComboBoxes(); // Refresh all comboboxes
             }
             else
             {
@@ -184,9 +185,9 @@ namespace SW_project
             }
         }
 
-        private void editMedicineButton_Click(object sender, EventArgs e)
+        private void editMedicineButton_Click(object sender, EventArgs e) // Edit Medicine button handler
         {
-            if (editMedicinePriceOfSaleTextField.Text.Trim() != string.Empty && editMedicineConcentrationTextField.Text.Trim() != string.Empty && editMedicineTradeNameTextField.Text.Trim() != string.Empty && editMedicineActiveIngredientTextField.Text.Trim() != string.Empty)
+            if (editMedicinePriceOfSaleTextField.Text.Trim() != string.Empty && editMedicineConcentrationTextField.Text.Trim() != string.Empty && editMedicineTradeNameTextField.Text.Trim() != string.Empty && editMedicineActiveIngredientTextField.Text.Trim() != string.Empty) //Input validation
             {
                 int result = controller.EditMedicine(Int32.Parse(editMedicineBarcodeComboBox.SelectedValue.GetHashCode().ToString()), editMedicineTradeNameTextField.Text, editMedicineActiveIngredientTextField.Text, editMedicineConcentrationTextField.Text, editMedicineCategoryComboBox.Text, float.Parse(editMedicinePriceOfSaleTextField.Text));
                 if (result == 0)
@@ -196,6 +197,10 @@ namespace SW_project
                 else
                 {
                     MessageBox.Show("Product Updated Successfully");
+                    editMedicineActiveIngredientTextField.Clear(); // Clear medicine data
+                    editMedicineTradeNameTextField.Clear();
+                    editMedicineConcentrationTextField.Clear();
+                    editMedicinePriceOfSaleTextField.Clear();
                 }
                 refreshComboBoxes();
             }
@@ -205,10 +210,11 @@ namespace SW_project
             }
         }
 
-        private void editCustomerButton_Click(object sender, EventArgs e)
+        private void editCustomerButton_Click(object sender, EventArgs e) // Edit customer button hanlder
         {
-            if (editCustomerTelephoneTextField.Text.Trim() != string.Empty && editCustomerAddressTextField.Text.Trim() != string.Empty) {
-                int result = controller.EditCustomer(Int32.Parse(editCustomerNameComboBox.SelectedValue.GetHashCode().ToString()), editCustomerNameComboBox.Text, editCustomerAddressTextField.Text, editCustomerCommentsTextField.Text, editCustomerTelephoneTextField.Text);
+            if (editCustomerTelephoneTextField.Text.Trim() != string.Empty && editCustomerAddressTextField.Text.Trim() != string.Empty) //Input Validation
+            {
+                int result = controller.EditCustomer(Int32.Parse(editCustomerNameComboBox.SelectedValue.GetHashCode().ToString()), editCustomerNameComboBox.Text, editCustomerAddressTextField.Text, editCustomerCommentsTextField.Text, editCustomerTelephoneTextField.Text); //Edit customer data
                 if (result == 0)
                 {
                     MessageBox.Show("No Customer Updated, recheck inputs");
@@ -225,16 +231,12 @@ namespace SW_project
             }
         }
 
-        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void deleteCustomerButton_Click(object sender, EventArgs e)
+        private void deleteCustomerButton_Click(object sender, EventArgs e) //Delete customer button Handler
         {
             
-                int c = Int32.Parse(deleteCustomerNameComboBox.SelectedValue.GetHashCode().ToString());
-                int result = controller.DeleteCustomer(c);
+                int c = Int32.Parse(deleteCustomerNameComboBox.SelectedValue.GetHashCode().ToString()); //get Customer Primary Key Number from selected combobox value
+                int result = controller.DeleteCustomer(c);// Pass the customer number to the stored procedure 
                 if (result == 0)
                 {
                     MessageBox.Show("Nothing have been deleted, recheck inputs");
@@ -243,32 +245,32 @@ namespace SW_project
                 {
                     MessageBox.Show("Customer deleted Successfully");
                 }
-                refreshComboBoxes();
+                refreshComboBoxes(); // refresh all comboboxes data 
             
           
 
         }
 
-        private void addNewOrderButton_Click_1(object sender, EventArgs e)
+        private void addNewOrderButton_Click_1(object sender, EventArgs e) // Add new order to the order description grid view
         {
             if (orderDescriptionGridView.Rows.Count > 0)
             {
-                if(orderDescriptionGridView.Rows[orderDescriptionGridView.Rows.Count-1].Cells[1].Value.ToString()==orderChooseMedicineComboBox.SelectedValue.ToString())
+                if(orderDescriptionGridView.Rows[orderDescriptionGridView.Rows.Count-1].Cells[1].Value.ToString()==orderChooseMedicineComboBox.SelectedValue.ToString()) //Check if medicine is already in the order list
                 {
                     MessageBox.Show("You have already chosen this medicine before , either delete the row or add new medicine ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
             orderTotalPriceValueTextLabel.Visible = true;
-            if (orderQuantityTextField.Text.Trim() == string.Empty)
+            if (orderQuantityTextField.Text.Trim() == string.Empty) //validation on the only input in this function which is quantity text field
             {
                 MessageBox.Show("One of the fields is empty. Please enter inputs.");
             }
             else
             {
                 DataTable dt = controller.stockavailable();
-                Double medicinePrice = controller.getMedicinePrice(Int32.Parse(orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString()));
-                Double totalPrice = medicinePrice * Int32.Parse(orderQuantityTextField.Text.ToString());
+                Double medicinePrice = controller.getMedicinePrice(Int32.Parse(orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString())); //selected medicine price
+                Double totalPrice = medicinePrice * Int32.Parse(orderQuantityTextField.Text.ToString()); // Total order price
                 int stockcount = (from DataRow dr in dt.Rows
                                   where (int)dr["Code"] == Int32.Parse(orderChooseMedicineComboBox.SelectedValue.GetHashCode().ToString())
                                   select (int)dr["Stock"]).FirstOrDefault();
@@ -302,14 +304,14 @@ namespace SW_project
 
         }
 
-        private void orderNewOrderButton_Click(object sender, EventArgs e)
+        private void orderNewOrderButton_Click(object sender, EventArgs e) // New order button clicked
         {
 
             if (orderDescriptionGridView.Rows.Count > 0)
             {
 
-                int newOrderNumber = controller.insertorders();
-                int transno = controller.lastorderno();
+                controller.insertorders(); // it inserts in the order table default values new order number + date
+                int transno = controller.lastorderno(); // get the last created order number
                 for (int i = 0; i < orderDescriptionGridView.Rows.Count; i++)
                 {
                     controller.insertordercon(Int32.Parse(orderDescriptionGridView.Rows[i].Cells[2].Value.ToString()), Int32.Parse(orderDescriptionGridView.Rows[i].Cells[1].Value.ToString()), transno);
@@ -319,8 +321,8 @@ namespace SW_project
                 stocklevel();
                 refreshComboBoxes();
                 orderQuantityTextField.Clear();
-                orderrec Or = new orderrec(transno);
-                Or.Show();
+                OrderReceipt orderReceipt = new OrderReceipt(transno); // Opens new Order Receipt window
+                orderReceipt.Show();
                 orderTotalPriceValueTextLabel.Text = "0";
                 orderTotalPriceValueTextLabel.Visible = false;
             }
@@ -330,7 +332,7 @@ namespace SW_project
             }
 
         }
-        private void stocklevel()
+        private void stocklevel()  // trigger the green and red icons of the available medicine in stock
         {
             int countinstock = controller.getoutofstockcount();
             if (countinstock == 0)
@@ -346,7 +348,7 @@ namespace SW_project
             }
         }
 
-        private void addPurchaseAddButton_Click(object sender, EventArgs e)
+        private void addPurchaseAddButton_Click(object sender, EventArgs e) // add new purchase function
         {
             
                 int result = controller.InsertPurchases(addPurchaseDateTimePicker.Text);
@@ -356,23 +358,23 @@ namespace SW_project
                 }
                 else
                 {
-                    Purchasesconcs p = new Purchasesconcs();
+                    PurchasesWindow p = new PurchasesWindow(); // new purchase window opens
                     p.Show();
 
                 }
-                refreshComboBoxes();
-                stocklevel();
+                refreshComboBoxes(); //refresh all comboboxes data
+                stocklevel(); // get stock level for the green and red icons as indication for medicines availablity
           
         }
 
-        private void Manager_MouseMove(object sender, MouseEventArgs e)
+        private void Manager_MouseMove(object sender, MouseEventArgs e) //refresh stock level every mouse movement 
         {
             stocklevel();
         }
 
-        private void deleteOrderButton_Click(object sender, EventArgs e)
+        private void deleteOrderButton_Click(object sender, EventArgs e) //delete order function
         {
-            int transaction_no = Int32.Parse(deleteOrderTransNumberComboBox.SelectedValue.GetHashCode().ToString());
+            int transaction_no = Int32.Parse(deleteOrderTransNumberComboBox.SelectedValue.GetHashCode().ToString()); // get order number
                 int result = controller.DeleteOrder(transaction_no);
                 if (result == 0)
                 {
@@ -385,7 +387,7 @@ namespace SW_project
                 refreshComboBoxes();
 
         }
-        private void searchMethodsComboBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void searchMethodsComboBox_SelectedIndexChanged(object sender, System.EventArgs e) // This function hanldes triggering the views upon user selection
         {
             searchActiveIngredientTradeNameLabel.Hide();
             searchMultipleOptionTextField.Hide();
@@ -400,7 +402,7 @@ namespace SW_project
             if (searchMethodsComboBox.Text == "All Medicine ")
             {
             }
-            if (searchMethodsComboBox.Text == "Selected Medicine by ingredient")
+            if (searchMethodsComboBox.Text == "Selected Medicine by ingredient") 
             {
                 searchActiveIngredientTradeNameLabel.Show();
                 searchActiveIngredientTradeNameLabel.Text = "Active ing.:";
@@ -445,16 +447,16 @@ namespace SW_project
 
         }
 
-        private void viewButton_Click(object sender, EventArgs e)
+        private void viewButton_Click(object sender, EventArgs e) // view selected search method
         {
 
-            if (searchMethodsComboBox.Text == "All Medicine ")
+            if (searchMethodsComboBox.Text == "All Medicine ") // get all medicines in stock
             {
                 DataTable dt = controller.AllStock() ;
                 searchDataGridView.DataSource = dt;
                 searchDataGridView.Refresh();
             }
-            if (searchMethodsComboBox.Text == "Selected Medicine by ingredient")
+            if (searchMethodsComboBox.Text == "Selected Medicine by ingredient") // search for medicine by ingredient
             {
                 DataTable dt0 = controller.SearchIng(searchMultipleOptionTextField.Text.ToString(), searchCategoryComboBox.Text.ToString());
                 searchDataGridView.DataSource = dt0;
@@ -464,7 +466,7 @@ namespace SW_project
                     MessageBox.Show("Please check your inputs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (searchMethodsComboBox.Text == "Selected Medicine by name")
+            if (searchMethodsComboBox.Text == "Selected Medicine by name") // search for medicine by name
             {
                 DataTable dt0 = controller.SearchName(searchMultipleOptionTextField.Text.ToString(), searchCategoryComboBox.Text.ToString());
                 searchDataGridView.DataSource = dt0;
@@ -474,7 +476,7 @@ namespace SW_project
                     MessageBox.Show("Please check your inputs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (searchMethodsComboBox.Text == "Medicine out of stock")
+            if (searchMethodsComboBox.Text == "Medicine out of stock") // get all medicines out of stock
             {
                 DataTable dt0 = controller.OutofStock(); ;
                 searchDataGridView.DataSource = dt0;
@@ -484,7 +486,7 @@ namespace SW_project
                     MessageBox.Show("All Medicine Are In Stock", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
-            if (searchMethodsComboBox.Text == "Purcshases in period")
+            if (searchMethodsComboBox.Text == "Purcshases in period") // get purchases from date 1 to date 2
             {
                 string date1 = searchFromDateTimePicker.Text;
                 string date2 = searchToDateTimePicker.Text;
@@ -492,7 +494,7 @@ namespace SW_project
                 searchDataGridView.DataSource = dt100;
                 searchDataGridView.Refresh();
             }
-            if (searchMethodsComboBox.Text == "Sales in period")
+            if (searchMethodsComboBox.Text == "Sales in period") // get all orders from date 1 to date 2
             {
                 string date1 = searchFromDateTimePicker.Text;
                 string date2 = searchToDateTimePicker.Text;
@@ -500,13 +502,13 @@ namespace SW_project
                 searchDataGridView.DataSource = dt100;
                 searchDataGridView.Refresh();
             }
-            if (searchMethodsComboBox.Text == "All Customers")
+            if (searchMethodsComboBox.Text == "All Customers") // get all customers
             {
                 DataTable dt = controller.get_all_customers();
                 searchDataGridView.DataSource = dt;
                 searchDataGridView.Refresh();
             }
-            if (searchMethodsComboBox.Text == "Selected customer by tel.")
+            if (searchMethodsComboBox.Text == "Selected customer by tel.") // select customer by telephone
             {
                 DataTable dt0 = controller.SearchCustomers(searchMultipleOptionTextField.Text.ToString());
                 searchDataGridView.DataSource = dt0;
@@ -516,7 +518,7 @@ namespace SW_project
         
         }
 
-        private void Manager_Load(object sender, EventArgs e)
+        private void Manager_Load(object sender, EventArgs e) // this function is used for the dataset initilaization 
         {
             // TODO: This line of code loads data into the 'pharmacyDataSet.getorders' table. You can move, or remove it, as needed.
             this.getordersTableAdapter.Fill(this.pharmacyDataSet.getorders);
@@ -531,7 +533,7 @@ namespace SW_project
 
         }
 
-        private void addMedicineNewCategoryCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void addMedicineNewCategoryCheckBox_CheckedChanged(object sender, EventArgs e) // this function trigger the visibility of the combobox and the textfield of medicine category depends on user choice
         {
             if(addMedicineNewCategoryCheckBox.Checked)
             {
@@ -545,7 +547,15 @@ namespace SW_project
             }
         }
 
+        private void orderDescriptionGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) // Hanlding user deleteing row from the order description
+        {
 
+                DataGridViewCell myCell = orderDescriptionGridView.SelectedCells[4]; // get selected row value of the price of the medicine selected
+                Double value = Double.Parse(orderTotalPriceValueTextLabel.Text); // get total price 
+                value -= Double.Parse(myCell.Value.ToString()); // remove the deleted medicine price from the total price value
+                orderTotalPriceValueTextLabel.Text = value.ToString(); // update total price value in the UI
+            
 
+        }
     }
 }

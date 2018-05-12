@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SW project.exe" size="616888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SW project.exe" size="617400">
       <assemblyIdentity name="SW project" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GL0FL9crPIJv69U9EKPS7rq2zP85BcehGTtmx1Wb3SU=</dsig:DigestValue>
+        <dsig:DigestValue>56FudJmf2gJkWw+i22cTsoCgCre37LaFmMe35Dcyppc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="SW project.exe.config" size="529">
+  <file name="SW project.exe.config" size="528">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EGW7zX/BwlU9XLxFQCfeCTSg+9NjKrDln5JCbTNq9Xs=</dsig:DigestValue>
+      <dsig:DigestValue>cB3yAkkgvI6+u4wYcJe22SSHx7trUDOfelxyvf6atqE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

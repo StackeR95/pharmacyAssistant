@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SW_project
 {
-    public class StoredProcedures
+    public class StoredProcedures // This class contains the name of each stored procedure in the database
     {
         public static string ChangePassword = "ChangePassword";
         public static string CheckAccountPassword = "CheckAccountPassword";

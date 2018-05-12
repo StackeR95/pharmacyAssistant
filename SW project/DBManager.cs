@@ -10,9 +10,10 @@ namespace SW_project
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=AHMED-PC\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=AHMEDADEL-PC\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=True";
         SqlConnection myConnection;
-        public DBManager()
+        private static  DBManager myDBManager = new DBManager(); // Singelton implementaion for DB Manager
+        private DBManager()
         {
             myConnection = new SqlConnection(DB_Connection_String);
             try
@@ -25,6 +26,10 @@ namespace SW_project
                 Console.WriteLine("The DB connection is failed");
                 Console.WriteLine(e.ToString());
             }
+        }
+        public static DBManager getDBManagerInstance()
+        {
+            return myDBManager;
         }
 
         public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
